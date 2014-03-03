@@ -1,0 +1,47 @@
+{
+	"year": "1930"
+		"best actor":
+			{"christian bale": 
+				{
+				"film": "American Hustle"
+				"character": "Irving Rosenfeld"
+				"win":false
+				}
+			"bob":
+				{
+				"film": "bobs party"
+				"character": "jack roberts"
+				"win":true
+				}
+			}
+		"best director":
+			{"martin scorcese": 
+				{
+				"film": "wolf of wall street"
+				"win":false
+			}
+	}
+
+	"year": "1930" 
+		"best actor":
+			{"christian bale": 
+				{
+				"film": "American Hustle"
+				"character": "Irving Rosenfeld"
+				"win":false
+				}
+			"bob":
+				{
+				"film": "bobs party"
+				"character": "jack roberts"
+				"win":true
+				}
+			}
+		"best director":
+			{"martin scorcese": 
+				{
+				"film": "wolf of wall street"
+				"win":false
+			}
+	}
+}

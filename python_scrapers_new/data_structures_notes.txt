@@ -1,0 +1,11 @@
+python data structures:
+
+lists:  My_List = [‘Manny’,’Moe,’Jack’]
+
+dictionary (dict): football_team_locations
+
+string: 
+
+tuples: can’t make any changes, sometimes thats useful 
+
+
