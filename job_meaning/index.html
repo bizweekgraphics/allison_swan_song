@@ -1,0 +1,476 @@
+<html>
+  <head>
+    <style>
+
+
+      @font-face {
+      font-family:'BWHaasHead';
+      src:url('fonts/bwhaasgroteskhead-95black.eot?#iefix') format('eot'),
+      url('fonts/bwhaasgroteskhead-95black.woff') format('woff'),
+      url('fonts/bwhaasgroteskhead-95black.ttf') format('truetype');
+      font-style:normal;
+      font-weight:700;
+      font-stretch:normal
+      }
+
+
+      body {
+        font-family: Helvetica;
+      }
+
+    #key {
+      margin-left:125px;
+      position:absolute;
+
+    }
+
+      .axis path, .axis line {
+    fill: none;
+    stroke: black;
+    stroke-width:1px;
+    shape-rendering: crispEdges;
+}
+
+.label {
+     font-family: Helvetica;
+    font-size: 14px;
+    font-weight:bold;
+
+}
+.axis text {
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+.education {
+  fill:#ed4d42;
+  opacity: .8;
+}
+
+.business {
+  fill:#3e8ac6;
+  opacity: .8;
+}
+
+.design {
+  fill:#7570AB;
+  
+  opacity: .8;
+}
+
+.social {
+  fill:#ec519b;
+  opacity: .8;
+}
+
+.retail {
+  fill:#f3e83e;
+  opacity: .8;
+}
+
+.eng {
+  fill:#53b8b9;
+  opacity: .8;
+}
+
+.medical {
+  fill:#f9ac31;
+  opacity: .8;
+}
+
+
+ #tooltip{
+        background-color: white;
+        border: 2px solid black;
+        -moz-box-shadow: 5px 5px #000;
+        -webkit-box-shadow: 5px 5px #000;
+        box-shadow: 5px 5px #000;
+        padding: 5px; 
+        position: absolute;
+        height: auto;
+        visibility: hidden;
+        z-index: 9999;
+        width: 185px;
+
+      }
+      
+      #tooltip p {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      #title {
+        font-size: 16px;
+        font-family: 'BWHaasHead', Helvetica;
+        font-weight:bold;
+        margin-bottom: 5px !important;
+      }
+
+        #score, #salary {
+        font-size: 14px;
+   
+      }
+
+
+      .hover_text{
+        color: #000;
+        font-size:14px;
+        font-weight:none !important;
+
+
+      }
+
+    #data-line {
+       margin-left: 315px;
+        float: left;
+  }
+
+.data {
+  font-size:10px;
+font-family: 'Helvetica', arial, times;
+  text-align: center;
+vertical-align: middle;
+}
+
+
+
+    
+    </style>
+    
+  </head>
+  <body>
+
+<!--[if lt IE 9]>
+<style type="text/css">
+#svg{
+display:none
+}
+</style>
+
+
+<img src="job_meaning.jpg">
+
+<![endif]-->
+
+
+  <div id="key">
+      <img src="key.jpg"/>
+    </div>
+
+    <div id="graphic"></div>
+    <div id="tooltip">
+      <p id="title">Job Title Here</p>
+      <p id="score"><span id="meaning" class="hover_text">1943</span>% report high job meaning</p>
+      <p id="salary"><span id="pay" class="hover_text">$206000</span> median salary</p>
+    </div>
+
+
+  <div id="data-line">
+  <p class="data">GRAPHIC BY BLOOMBERG BUSINESSWEEK. DATA: PAYSCALE</p>
+</div>
+
+
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+var jobs = [{"title":"Supervisory Special Agent","pay":129400,"meaning":100,"industry":"business"},
+{"title":"Realtor","pay":64100,"meaning":83,"industry":"business"},
+{"title":"Chief Executive Officer","pay":155500,"meaning":82,"industry":"business"},
+{"title":"Owner/Operator, Restaurant","pay":65700,"meaning":82,"industry":"business"},
+{"title":"Funeral Director","pay":41000,"meaning":80,"industry":"business"},
+{"title":"Journalist, Broadcast","pay":31000,"meaning":74,"industry":"business"},
+{"title":"Senior Research Associate","pay":70300,"meaning":70,"industry":"business"},
+{"title":"Director, Compensation & Benefits","pay":122200,"meaning":64,"industry":"business"},
+{"title":"Fraud Analyst","pay":39300,"meaning":61,"industry":"business"},
+{"title":"File Clerk","pay":24000,"meaning":47,"industry":"business"},
+{"title":"Social Media Manager","pay":42200,"meaning":45,"industry":"business"},
+{"title":"Vice President, Sales and Support","pay":131600,"meaning":40,"industry":"business"},
+{"title":"Used Car Manager","pay":78700,"meaning":40,"industry":"business"},
+{"title":"Associate Attorney","pay":72400,"meaning":39,"industry":"business"},
+{"title":"Senior Research Analyst","pay":68100,"meaning":39,"industry":"business"},
+{"title":"Technical Program Manager","pay":119700,"meaning":38,"industry":"business"},
+{"title":"User Interface Engineer","pay":71900,"meaning":38,"industry":"business"},
+{"title":"Product Marketing Director","pay":135400,"meaning":36,"industry":"business"},
+{"title":"Corporate Counsel","pay":109900,"meaning":36,"industry":"business"},
+{"title":"Credit/Collections Director","pay":100200,"meaning":35,"industry":"business"},
+{"title":"Compensation Consultant","pay":91100,"meaning":35,"industry":"business"},
+{"title":"Senior Web Developer","pay":79500,"meaning":35,"industry":"business"},
+{"title":"Public-Relations Supervisor","pay":65900,"meaning":35,"industry":"business"},
+{"title":"Senior Marketing Analyst","pay":72500,"meaning":34,"industry":"business"},
+{"title":"Retail Sales Associate","pay":20100,"meaning":34,"industry":"business"},
+{"title":"Network Architect","pay":114800,"meaning":33,"industry":"business"},
+{"title":"Senior User Experience Designer","pay":104100,"meaning":33,"industry":"business"},
+{"title":"Scrum Master","pay":89400,"meaning":33,"industry":"business"},
+{"title":"Senior Counsel","pay":176900,"meaning":31,"industry":"business"},
+{"title":"Bookseller","pay":18500,"meaning":31,"industry":"business"},
+{"title":"Energy Trader","pay":105600,"meaning":30,"industry":"business"},
+{"title":"Telemarketer","pay":23100,"meaning":30,"industry":"business"},
+{"title":"Senior Privacy & Security Analyst","pay":90800,"meaning":27,"industry":"business"},
+{"title":"Senior Copywriter","pay":70700,"meaning":25,"industry":"business"},
+{"title":"Global Account Manager","pay":130100,"meaning":23,"industry":"business"},
+{"title":"Merchandise Planner","pay":65700,"meaning":21,"industry":"business"},
+{"title":"Consumer Loan Processor","pay":30600,"meaning":21,"industry":"business"},
+{"title":"Brand Strategist","pay":67700,"meaning":17,"industry":"business"},
+{"title":"Securities Trader","pay":70400,"meaning":14,"industry":"business"},
+{"title":"Media Buyer","pay":42300,"meaning":14,"industry":"business"},
+{"title":"Web Operations Coordinator","pay":37400,"meaning":9,"industry":"business"},
+{"title":"Airline Reservation Agent","pay":28700,"meaning":9,"industry":"business"},
+{"title":"Revenue Analyst","pay":46000,"meaning":8,"industry":"business"},
+{"title":"Television Newscast Director","pay":34500,"meaning":8,"industry":"business"},
+{"title":"Senior Construction Manager","pay":122300,"meaning":100,"industry":"eng"},
+{"title":"Chief Fashion Designer","pay":99000,"meaning":36,"industry":"design"},
+{"title":"Fashion Stylist","pay":40200,"meaning":17,"industry":"design"},
+{"title":"Associate Fashion Designer","pay":50700,"meaning":9,"industry":"design"},
+{"title":"Graphic Artist/Animator","pay":45700,"meaning":4,"industry":"design"},
+{"title":"Adult Literacy, Remedial Education, GED Teacher/Instructor","pay":38400,"meaning":95,"industry":"edu"},
+{"title":"Art Teacher","pay":40000,"meaning":89,"industry":"edu"},
+{"title":"Physical Education Teacher","pay":39800,"meaning":83,"industry":"edu"},
+{"title":"Admissions Counselor","pay":34500,"meaning":67,"industry":"edu"},
+{"title":"Water Plant Operator","pay":35600,"meaning":100,"industry":"eng"},
+{"title":"Aircraft Test Pilot","pay":121900,"meaning":91,"industry":"eng"},
+{"title":"Power Plant Operator","pay":61900,"meaning":72,"industry":"eng"},
+{"title":"Petroleum Geologist","pay":109400,"meaning":67,"industry":"eng"},
+{"title":"Field Service Engineer","pay":63200,"meaning":58,"industry":"eng"},
+{"title":"Water Treatment Plant Laboratory Technician","pay":36300,"meaning":100,"industry":"eng"},
+{"title":"Dermatologist","pay":212900,"meaning":100,"industry":"medical"},
+{"title":"Rehabilitation Equipment Specialist","pay":40200,"meaning":100,"industry":"medical"},
+{"title":"Certified Nurse Midwife","pay":85200,"meaning":98,"industry":"medical"},
+{"title":"Neurosurgeon","pay":381500,"meaning":97,"industry":"medical"},
+{"title":"Obstetrician/ Gynecologist","pay":199700,"meaning":95,"industry":"medical"},
+{"title":"Cardiothoracic Surgeon","pay":353900,"meaning":91,"industry":"medical"},
+{"title":"Speech-Language Pathologist","pay":65300,"meaning":91,"industry":"medical"},
+{"title":"Hospital Administrator","pay":97200,"meaning":89,"industry":"medical"},
+{"title":"Licensed Massage Therapist","pay":41400,"meaning":88,"industry":"medical"},
+{"title":"Pharmacist","pay":110800,"meaning":77,"industry":"medical"},
+{"title":"Emergency Medical Technician - Basic","pay":26000,"meaning":77,"industry":"medical"},
+{"title":"Optician","pay":33900,"meaning":70,"industry":"medical"},
+{"title":"Mental Health Therapist","pay":41200,"meaning":90,"industry":"medical"},
+{"title":"Veterinarian","pay":73500,"meaning":89,"industry":"medical"},
+{"title":"Anesthesiologist","pay":283600,"meaning":88,"industry":"medical"},
+{"title":"Epidemiologist","pay":63500,"meaning":88,"industry":"medical"},
+{"title":"Personal Trainer","pay":37900,"meaning":88,"industry":"medical"},
+{"title":"Dental Hygienist","pay":66500,"meaning":76,"industry":"medical"},
+{"title":"Barista","pay":18900,"meaning":33,"industry":"retail"},
+{"title":"Dishwasher","pay":17400,"meaning":33,"industry":"retail"},
+{"title":"Pastry Cook","pay":24900,"meaning":26,"industry":"retail"},
+{"title":"Restaurant Host/Hostess","pay":18300,"meaning":26,"industry":"retail"},
+{"title":"Grocery Stocker","pay":19700,"meaning":21,"industry":"retail"},
+{"title":"Fast-Food Worker","pay":16100,"meaning":19,"industry":"retail"},
+{"title":"Pizza Delivery Driver","pay":17100,"meaning":18,"industry":"retail"},
+{"title":"Laundry Manager","pay":57400,"meaning":9,"industry":"retail"},
+{"title":"Coffee Shop Manager","pay":27500,"meaning":9,"industry":"retail"},
+{"title":"Gaming Dealer","pay":35500,"meaning":7,"industry":"retail"},
+{"title":"Gas Station Attendant","pay":17100,"meaning":4,"industry":"retail"},
+{"title":"Deputy Fire Chief","pay":75300,"meaning":100,"industry":"social"},
+{"title":"Sign Language Interpreter","pay":42100,"meaning":100,"industry":"social"},
+{"title":"Child Life Specialist","pay":39000,"meaning":100,"industry":"social"},
+{"title":"Worship Coordinator","pay":38000,"meaning":100,"industry":"social"},
+{"title":"Crime Scene Investigator","pay":37500,"meaning":93,"industry":"social"},
+{"title":"Park Ranger","pay":34000,"meaning":92,"industry":"social"},
+{"title":"Soldier","pay":41300,"meaning":91,"industry":"social"},
+{"title":"Addiction Counselor","pay":35200,"meaning":89,"industry":"social"},
+{"title":"Child, Family, or School Social Worker","pay":34900,"meaning":89,"industry":"social"},
+{"title":"Police Lieutenant","pay":73300,"meaning":85,"industry":"social"},
+{"title":"Dog Kennel Worker","pay":18000,"meaning":64,"industry":"social"},
+{"title":"Arborist","pay":39000,"meaning":63,"industry":"social"}];
+
+   </script>
+
+    <script>
+
+    var w = 750;
+    var h = 620;
+    var padding = 90; 
+
+
+
+
+    var rScale = d3.scale.sqrt()
+                  .domain([0,400000])
+                  .range([1,15]);
+
+    var xScale = d3.scale.linear()
+                  .domain([0,100])
+                  .range([padding, w-padding]);
+
+    var yScale = d3.scale.linear()
+                  .domain([400000,0])
+                  .range([padding, h-padding]);
+
+
+var commasFormatter = d3.format(",.0f")
+
+
+
+    var body = d3.select("body");
+
+
+
+    var svg = d3.select("#graphic")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+
+var circle = svg.selectAll("circle")
+           .data(jobs)
+           .enter()
+           .append("circle");
+    
+     circle.attr("class","site")
+           .attr("r", 8)
+           .attr("cx", function(d) { return xScale(d.meaning) })
+           .attr("cy", function(d){ return yScale(d.pay) })
+           .attr("class", function(d) { 
+              if (d.industry =="edu") 
+              {
+                return"education";
+              }
+              if (d.industry =="medical")
+              {
+                return"medical";
+              }
+                if (d.industry =="eng")
+              {
+                return"eng";
+              }
+                if (d.industry =="retail")
+              {
+                return"retail";
+              }
+                if (d.industry =="business")
+              {
+                return"business";
+              }
+                if (d.industry =="social")
+              {
+                return"social";
+              }
+                if (d.industry =="design")
+              {
+                return"design";
+              }
+                 if (d.industry =="construction")
+              {
+                return"construction";
+              }
+          });
+   
+    var xAxis = d3.svg.axis()
+                  .scale(xScale)
+                  .orient("bottom")
+                  .ticks(4)  //Set rough # of ticks
+                  .tickFormat(function(d) {return commasFormatter(d) +"%"});
+
+
+    var yAxis = d3.svg.axis()
+                  .scale(yScale)
+                  .orient("left")
+                  .ticks(5)
+                  .tickFormat(function(d) {return"$" + commasFormatter(d)});
+
+
+    svg.append("g")
+       .attr("class","axis")
+        .attr("transform","translate(0," + (h - padding) +")")
+       .call(xAxis);
+
+    svg.append("g")
+      .attr("class","axis")
+      .attr("transform","translate(" + padding +",0)")
+      .call(yAxis);
+
+
+svg.selectAll("circle")
+           .on("mouseover", function(d){
+              d3.select(this)
+                .transition()
+                .duration(100)
+                .style("opacity","1")
+                .style("stroke","black")
+                .style("stroke-weight","2")
+              d3.select("#tooltip")
+                .style("left", (d3.event.pageX) + 10 +"px")
+                .style("top", (d3.event.pageY) - 30 +"px")
+                .transition()
+                .style("visibility","visible");
+              d3.select("#title")
+                .text(d.title );
+              d3.select("#meaning")
+                .text( d.meaning );
+              d3.select("#pay")
+                .text("$" + commasFormatter(d.pay) );
+           })
+
+           .on("mouseout", function(d){
+              d3.select(this)
+              .transition()
+                .style("opacity",".8")
+                .style("stroke","none")
+                .style("stroke-weight","0")
+              d3.select("#tooltip")
+                .transition()
+                .style("visibility","hidden");
+           });
+
+
+        svg.append("text")
+    .attr("class","x label")
+    .attr("text-anchor","end")
+    .attr("x", 585)
+    .attr("y", 575)
+    .text("Percentage of respondents reporting high job meaning");
+
+
+    svg.append("text")
+    .attr("class","y label")
+    .attr("text-anchor","end")
+    .attr("x", -242)
+    .attr("y", 10)
+    .attr("transform","rotate(-90)")
+    .text("Median salary ($)");
+
+
+   </script>
+
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

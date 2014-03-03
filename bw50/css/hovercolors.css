@@ -1,0 +1,58 @@
+
+/*options filters colors */
+
+#options li.consumer-dis a:hover {
+  color=#6699FF;
+}
+
+#options li .consum-sta {
+  background: #FFAD5C;
+}
+
+#options li .energy {
+  background: #D685FF;
+}
+
+#options li .finance {
+  background: #2EB8B8;
+}
+
+#options li .health {
+  background: #FFD633;
+}
+
+#options li .industrials {
+  background: #99CC00;
+}
+
+#options li .tech {
+  background: #CC3300;
+}
+
+#options li .materials {
+  color:#6699FF;
+}
+
+
+
+#options li a {
+color: #666;
+cursor: pointer;
+margin: 0 15px 5px 0;
+padding: 6px 10px 6px 4px ;
+font-family: "helvetica",arial;
+border-bottom: 1px solid #CCCCCC;
+border-length: 1px;
+float: left;
+display: inline-block;
+text-align: left;
+}
+
+#options li a.selected {
+  background-color: #000;
+  text-shadow: none;
+  color: white;
+  font-weight:bold;
+  font-family: "helvetica",arial;
+	font-weight: bold;
+}

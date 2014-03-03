@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+
+<!--[if lte IE 8]><img src="iemap.jpg" /><![endif]-->
+<!--[if gt IE 8]><img src="iemap.jpg" /><![endif]-->
+<!--[if !IE]><img src="iemap.jpg" /><![endif]-->
+
+
+    <head>
+       <style>
+
+#container {
+      margin-top: 10px;
+       width: 950px; 
+       height: 625px; 
+       position: relative; 
+       padding-top:15px; 
+       background-image: url('gdpmapweb15.jpg');
+       padding-left: 2px;
+    }
+
+#data-line {
+  width: 950px;
+  text-align: center;
+  font-size: 10px;
+  font-family: Helvetica;
+
+}
+
+.hover{
+  padding: 3px; 
+  border: 2px solid #000; 
+  background-color: #fff; 
+  } 
+
+  .country_name {
+    font-family: Helvetica;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 0em;
+    padding:0;
+  }
+
+  .gdp_change {
+    font-family: Helvetica;
+    font-size: 12px;
+    line-height: 1.0em;
+    padding: 0;
+  }
+
+  .path {
+    stroke-width:5px;
+  }
+
+</style>
+
+    </head>
+    <body>
+        
+
+
+        <div id="container" >
+            
+
+        </div>
+        <div id="data-line">
+                    <p class="info">GRAPHIC BY BLOOMBERG BUSINESSWEEK. DATA: INTERNATIONAL MONETARY FUND.</p>
+            </div>
+        
+        <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <script src="http://d3js.org/d3.geo.projection.v0.min.js" charset="utf-8"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="js/gdpmap.js"></script>
+        <script src="js/jquery.min.js"></script>
+
+       <script>
+
+
+
+    var map = new Datamap({
+        element: document.getElementById('container'),
+        scope: 'world',
+        setProjection: function(element, options) {
+                var projection, path; 
+                var width = element.offsetWidth,
+                    height = element.offsetHeight;
+
+
+
+              var projection = d3.geo.aitoff()
+                    .scale(150)
+                    .translate([width / 2, height / 2])
+                    .precision(.1);
+
+
+                path = d3.geo.path()
+                  .projection( projection );
+
+                return {path: path, projection: projection};
+
+            },
+            projection: 'aitoff',
+        fills: {
+            "< 2%":'rgb(107, 174, 214)',
+            "2-4%": 'rgb(33, 113, 181)',
+            "4-6%": 'rgb(8, 81, 156)',
+            "> 6%": 'rgb(8, 48, 107)',
+             "No data": 'rgb(135, 135, 135)',
+            defaultFill: 'rgb(135, 135, 135)'
+        },
+
+        data: {
+
+CYP:{ fillKey:"< 2%",GDP_change:-3.89}, 
+GNQ:{ fillKey:"< 2%",GDP_change:-1.94},
+SVN:{ fillKey:"< 2%",GDP_change:-1.45},
+BRB:{ fillKey:"< 2%",GDP_change:-1.05},
+SMR:{ fillKey:"< 2%",GDP_change:0.00},
+CAF:{ fillKey:"< 2%",GDP_change:0.15},
+ESP:{ fillKey:"< 2%",GDP_change:0.17},
+SWZ:{ fillKey:"< 2%",GDP_change:0.31},
+NLD:{ fillKey:"< 2%",GDP_change:0.31},
+FSM:{ fillKey:"< 2%",GDP_change:0.53},
+GRC:{ fillKey:"< 2%",GDP_change:0.63},
+ITA:{ fillKey:"< 2%",GDP_change:0.71},
+PRT:{ fillKey:"< 2%",GDP_change:0.77},
+FRA:{ fillKey:"< 2%",GDP_change:0.98},
+BEL:{ fillKey:"< 2%",GDP_change:1.04},
+GRD:{ fillKey:"< 2%",GDP_change:1.05},
+FIN:{ fillKey:"< 2%",GDP_change:1.15},
+DNK:{ fillKey:"< 2%",GDP_change:1.23},
+JPN:{ fillKey:"< 2%",GDP_change:1.24},
+JAM:{ fillKey:"< 2%",GDP_change:1.25},
+LUX:{ fillKey:"< 2%",GDP_change:1.26},
+HUN:{ fillKey:"< 2%",GDP_change:1.26},
+TUV:{ fillKey:"< 2%",GDP_change:1.26},
+IRN:{ fillKey:"< 2%",GDP_change:1.28},
+LCA:{ fillKey:"< 2%",GDP_change:1.34},
+DEU:{ fillKey:"< 2%",GDP_change:1.40},
+CZE:{ fillKey:"< 2%",GDP_change:1.45},
+HRV:{ fillKey:"< 2%",GDP_change:1.50},
+LBN:{ fillKey:"< 2%",GDP_change:1.50},
+UKR:{ fillKey:"< 2%",GDP_change:1.50},
+DMA:{ fillKey:"< 2%",GDP_change:1.55},
+BGR:{ fillKey:"< 2%",GDP_change:1.60},
+SLV:{ fillKey:"< 2%",GDP_change:1.60},
+TON:{ fillKey:"< 2%",GDP_change:1.62},
+AUT:{ fillKey:"< 2%",GDP_change:1.64},
+VEN:{ fillKey:"< 2%",GDP_change:1.70},
+IRL:{ fillKey:"< 2%",GDP_change:1.75},
+MLT:{ fillKey:"< 2%",GDP_change:1.76},
+CHE:{ fillKey:"< 2%",GDP_change:1.79},
+ERI:{ fillKey:"< 2%",GDP_change:1.86},
+WSM:{ fillKey:"< 2%",GDP_change:1.87},
+GBR:{ fillKey:"< 2%",GDP_change:1.87},
+SRB:{ fillKey:"< 2%",GDP_change:1.96},
+BIH:{ fillKey:"2-4%",GDP_change:2.00},
+VCT:{ fillKey:"2-4%",GDP_change:2.03},
+ALB:{ fillKey:"2-4%",GDP_change:2.10},
+BHS:{ fillKey:"2-4%",GDP_change:2.10},
+ISL:{ fillKey:"2-4%",GDP_change:2.14},
+ROU:{ fillKey:"2-4%",GDP_change:2.16},
+CAN:{ fillKey:"2-4%",GDP_change:2.16},
+MNE:{ fillKey:"2-4%",GDP_change:2.19},
+FJI:{ fillKey:"2-4%",GDP_change:2.24},
+NOR:{ fillKey:"2-4%",GDP_change:2.28},
+TTO:{ fillKey:"2-4%",GDP_change:2.28},
+SWE:{ fillKey:"2-4%",GDP_change:2.30},
+SVK:{ fillKey:"2-4%",GDP_change:2.34},
+POL:{ fillKey:"2-4%",GDP_change:2.36},
+EST:{ fillKey:"2-4%",GDP_change:2.48},
+BLZ:{ fillKey:"2-4%",GDP_change:2.50},
+PLW:{ fillKey:"2-4%",GDP_change:2.50},
+BRA:{ fillKey:"2-4%",GDP_change:2.50},
+PAK:{ fillKey:"2-4%",GDP_change:2.53},
+SDN:{ fillKey:"2-4%",GDP_change:2.54},
+BLR:{ fillKey:"2-4%",GDP_change:2.54},
+KWT:{ fillKey:"2-4%",GDP_change:2.55},
+USA:{ fillKey:"2-4%",GDP_change:2.59},
+MHL:{ fillKey:"2-4%",GDP_change:2.64},
+GNB:{ fillKey:"2-4%",GDP_change:2.68},
+KIR:{ fillKey:"2-4%",GDP_change:2.70},
+ARG:{ fillKey:"2-4%",GDP_change:2.75},
+AUS:{ fillKey:"2-4%",GDP_change:2.78},
+HND:{ fillKey:"2-4%",GDP_change:2.80},
+EGY:{ fillKey:"2-4%",GDP_change:2.83},
+ZAF:{ fillKey:"2-4%",GDP_change:2.93},
+NZL:{ fillKey:"2-4%",GDP_change:2.94},
+MEX:{ fillKey:"2-4%",GDP_change:3.00},
+RUS:{ fillKey:"2-4%",GDP_change:3.00},
+KNA:{ fillKey:"2-4%",GDP_change:3.18},
+ATG:{ fillKey:"2-4%",GDP_change:3.19},
+MKD:{ fillKey:"2-4%",GDP_change:3.22},
+BHR:{ fillKey:"2-4%",GDP_change:3.29},
+URY:{ fillKey:"2-4%",GDP_change:3.30},
+ISR:{ fillKey:"2-4%",GDP_change:3.31},
+LTU:{ fillKey:"2-4%",GDP_change:3.36},
+YEM:{ fillKey:"2-4%",GDP_change:3.38},
+GTM:{ fillKey:"2-4%",GDP_change:3.40},
+OMN:{ fillKey:"2-4%",GDP_change:3.40},
+SGP:{ fillKey:"2-4%",GDP_change:3.43},
+TUR:{ fillKey:"2-4%",GDP_change:3.47},
+JOR:{ fillKey:"2-4%",GDP_change:3.50},
+AFG:{ fillKey:"2-4%",GDP_change:3.55},
+ZWE:{ fillKey:"2-4%",GDP_change:3.56},
+DOM:{ fillKey:"2-4%",GDP_change:3.63},
+DZA:{ fillKey:"2-4%",GDP_change:3.68},
+KOR:{ fillKey:"2-4%",GDP_change:3.68},
+TUN:{ fillKey:"2-4%",GDP_change:3.70},
+MDG:{ fillKey:"2-4%",GDP_change:3.75},
+MDV:{ fillKey:"2-4%",GDP_change:3.77},
+TWN:{ fillKey:"2-4%",GDP_change:3.77},
+SLB:{ fillKey:"2-4%",GDP_change:3.80},
+CRI:{ fillKey:"2-4%",GDP_change:3.80},
+MAR:{ fillKey:"2-4%",GDP_change:3.85},
+SYC:{ fillKey:"2-4%",GDP_change:3.89},
+ARE:{ fillKey:"2-4%",GDP_change:3.90},
+COM:{ fillKey:"2-4%",GDP_change:3.96},
+NAM:{ fillKey:"2-4%",GDP_change:3.98},
+MDA:{ fillKey:"4-6%",GDP_change:4.00},
+NIC:{ fillKey:"4-6%",GDP_change:4.00},
+SUR:{ fillKey:"4-6%",GDP_change:4.03},
+ECU:{ fillKey:"4-6%",GDP_change:4.03},
+BWA:{ fillKey:"4-6%",GDP_change:4.11},
+COL:{ fillKey:"4-6%",GDP_change:4.16},
+VUT:{ fillKey:"4-6%",GDP_change:4.18},
+LVA:{ fillKey:"4-6%",GDP_change:4.24},
+MUS:{ fillKey:"4-6%",GDP_change:4.35},
+HKG:{ fillKey:"4-6%",GDP_change:4.38},
+SAU:{ fillKey:"4-6%",GDP_change:4.39},
+CPV:{ fillKey:"4-6%",GDP_change:4.43},
+CHL:{ fillKey:"4-6%",GDP_change:4.50},
+NPL:{ fillKey:"4-6%",GDP_change:4.50},
+HTI:{ fillKey:"4-6%",GDP_change:4.53},
+SEN:{ fillKey:"4-6%",GDP_change:4.59},
+PRY:{ fillKey:"4-6%",GDP_change:4.60},
+BDI:{ fillKey:"4-6%",GDP_change:4.74},
+BEN:{ fillKey:"4-6%",GDP_change:4.76},
+ARM:{ fillKey:"4-6%",GDP_change:4.80},
+COG:{ fillKey:"4-6%",GDP_change:4.82},
+MYS:{ fillKey:"4-6%",GDP_change:4.90},
+CMR:{ fillKey:"4-6%",GDP_change:4.95},
+GEO:{ fillKey:"4-6%",GDP_change:4.97},
+LSO:{ fillKey:"4-6%",GDP_change:5.00},
+BOL:{ fillKey:"4-6%",GDP_change:5.00},
+QAT:{ fillKey:"4-6%",GDP_change:5.01},
+IND:{ fillKey:"4-6%",GDP_change:5.15},
+GIN:{ fillKey:"4-6%",GDP_change:5.19},
+KAZ:{ fillKey:"4-6%",GDP_change:5.24},
+THA:{ fillKey:"4-6%",GDP_change:5.25},
+VNM:{ fillKey:"4-6%",GDP_change:5.40},
+IDN:{ fillKey:"4-6%",GDP_change:5.50},
+STP:{ fillKey:"4-6%",GDP_change:5.50},
+AZE:{ fillKey:"4-6%",GDP_change:5.59},
+PER:{ fillKey:"4-6%",GDP_change:5.73},
+TJK:{ fillKey:"4-6%",GDP_change:5.75},
+GUY:{ fillKey:"4-6%",GDP_change:5.82},
+TGO:{ fillKey:"4-6%",GDP_change:5.92},
+DJI:{ fillKey:"4-6%",GDP_change:5.99},
+BGD:{ fillKey:"> 6%",GDP_change:6.01},
+PHL:{ fillKey:"> 6%",GDP_change:6.03},
+GHA:{ fillKey:"> 6%",GDP_change:6.09},
+MWI:{ fillKey:"> 6%",GDP_change:6.12},
+BRN:{ fillKey:"> 6%",GDP_change:6.22},
+KEN:{ fillKey:"> 6%",GDP_change:6.25},
+AGO:{ fillKey:"> 6%",GDP_change:6.27},
+PNG:{ fillKey:"> 6%",GDP_change:6.30},
+IRQ:{ fillKey:"> 6%",GDP_change:6.34},
+NER:{ fillKey:"> 6%",GDP_change:6.34},
+MRT:{ fillKey:"> 6%",GDP_change:6.36},
+BFA:{ fillKey:"> 6%",GDP_change:6.38},
+UGA:{ fillKey:"> 6%",GDP_change:6.48},
+UZB:{ fillKey:"> 6%",GDP_change:6.50},
+ZMB:{ fillKey:"> 6%",GDP_change:6.54},
+LKA:{ fillKey:"> 6%",GDP_change:6.75},
+LBR:{ fillKey:"> 6%",GDP_change:6.82},
+GAB:{ fillKey:"> 6%",GDP_change:6.84},
+MMR:{ fillKey:"> 6%",GDP_change:6.88},
+PAN:{ fillKey:"> 6%",GDP_change:6.93},
+TZA:{ fillKey:"> 6%",GDP_change:7.19},
+KHM:{ fillKey:"> 6%",GDP_change:7.24},
+CHN:{ fillKey:"> 6%",GDP_change:7.25},
+NGA:{ fillKey:"> 6%",GDP_change:7.37},
+MLI:{ fillKey:"> 6%",GDP_change:7.39},
+ETH:{ fillKey:"> 6%",GDP_change:7.46},
+RWA:{ fillKey:"> 6%",GDP_change:7.50},
+LAO:{ fillKey:"> 6%",GDP_change:7.80},
+TLS:{ fillKey:"> 6%",GDP_change:7.99},
+CIV:{ fillKey:"> 6%",GDP_change:8.02},
+BTN:{ fillKey:"> 6%",GDP_change:8.04},
+GMB:{ fillKey:"> 6%",GDP_change:8.46},
+MOZ:{ fillKey:"> 6%",GDP_change:8.50},
+TKM:{ fillKey:"> 6%",GDP_change:10.42},
+TCD:{ fillKey:"> 6%",GDP_change:10.48},
+COD:{ fillKey:"> 6%",GDP_change:10.49},
+MNG:{ fillKey:"> 6%",GDP_change:11.68},
+SLE:{ fillKey:"> 6%",GDP_change:14.03},
+LBY:{ fillKey:"> 6%",GDP_change:25.53},
+SDS:{ fillKey:"> 6%",GDP_change:43.02},
+SYR:{ fillKey:"No data",GDP_change:'no data'},
+ATA:{ fillKey:"No data",GDP_change:'no data'},
+CUB:{ fillKey:"No data",GDP_change:'no data'},
+GRL:{ fillKey:"No data",GDP_change:'no data'},
+PRK:{ fillKey:"No data",GDP_change:'no data'},
+SOM:{ fillKey:"No data",GDP_change:'no data'},
+'-99':{ fillKey:"No data",GDP_change:'no data'},
+KGZ:{ fillKey:"No data",GDP_change:'no data'},
+ESH:{ fillKey:"No data",GDP_change:'no data'}
+
+        },
+
+
+ });
+
+</script>
+
+
+
+    </body>
+</html>
+

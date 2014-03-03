@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.node {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+}
+
+rect {
+  stroke: black;
+  stroke-width: 1;
+  fill: none;
+}
+
+</style>
+<svg id="treemap"></svg>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var margin = {top: 40, right: 10, bottom: 10, left: 10},
+    width = 960 - margin.left - margin.right,
+    height = 960 - margin.top - margin.bottom;
+
+var color = d3.scale.category20c();
+
+var treemap = d3.layout.treemap()
+    .size([width, height])
+    .sticky(true)
+    .value(function(d) { return d.size; });
+
+var div = d3.select("svg").append("g") //changed from previous index to get svgs instead of divs
+    .attr("position", "relative") //changed all ".style" to ".attr" for svgs 
+    .attr("width", (width + margin.left + margin.right) + "px")
+    .attr("height", (height + margin.top + margin.bottom) + "px")
+    .attr("left", margin.left + "px")
+    .attr("top", margin.top + "px");
+
+d3.json("ticket_prices.json", function(error, root) {
+  var node = div.datum(root).selectAll(".node")
+      .data(treemap.nodes)
+      .enter().append("rect")
+      .attr("class", "node")
+      .call(position);
+});
+
+function position() {
+  this.attr("x", function(d) { return d.x + "px"; }) //again changed all ".style" to ".attr" for svgs 
+      .attr("y", function(d) { return d.y + "px"; })
+      .attr("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
+      .attr("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
+}
+
+</script>

@@ -1,0 +1,101 @@
+/* my style */
+
+@font-face {
+font-family:'BWHaasHead';
+src:url('bwhaasgroteskhead-95black.eot?#iefix') format('eot'),
+url('bwhaasgroteskhead-95black.woff') format('woff'),
+url('bwhaasgroteskhead-95black.ttf') format('truetype');
+font-style:normal;
+font-weight:700;
+font-stretch:normal
+}
+
+#bwg-fifa-shell{
+  width:950px;
+  font-family: 'BWHaasHead', Helvetica, arial, times;
+  position:relative;
+  margin:0px;
+  }
+  
+#bwg-fifa-containter{
+  width:950px;
+  font-family: 'BWHaasHead', Helvetica, arial, times;
+  position:relative;
+  margin:0px;
+  }
+
+  
+  /*tooltip style*/
+
+* {margin:0; padding:0}
+body {font: 14px/1.5 'BWHaasHead', Helvetica, sans-serif; background:#FFF}
+#text {margin:50px auto; width:500px}
+.hotspot {color:#fff; padding-bottom:1px; cursor:pointer}
+
+
+#tt {
+  background: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 4px solid #000;
+  padding: 2px 5px;
+  font-family: 'BWHaasHead', arial, sans-serif;
+  font-size:14px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);}
+  
+.fifa_1:hover {
+  fill:#2AB0F2;
+  }
+
+.fifa_2:hover {
+  fill:#afcf3a;
+  }
+
+  .fifa_3:hover {
+  fill:#dc4743;
+  }
+
+  .fifa_4:hover {
+  fill:#9077c4;
+  }
+
+  .fifa_5:hover {
+  fill:#f9d919;
+  }
+
+   .fifa_6:hover {
+  fill:#f99d52;
+  }
+
+  .fifa_7:hover {
+  fill:#d044cd;
+  }
+ 
+
+.data-line {
+  font-size:10px;
+font-family: 'Helvetica', arial, times;
+  text-align: center;
+vertical-align: middle;
+padding:10px;
+}
+
+.photo-credit {
+  font-size:10px;
+font-family: 'Helvetica', arial, times;
+}
+
+#photo-credits {
+  margin:15px;
+  padding:5px;
+  }
+
+  a {
+    text-decoration:underline;
+    color:#000;}
+
+
+/* My Style */

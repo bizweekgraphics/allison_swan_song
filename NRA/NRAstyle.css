@@ -1,0 +1,10 @@
+/**** Base styles ****/
+
+.gfx-text{ display:none; } 
+
+.show-box-1 #gfx-text-1 { display:block; }
+
+
+js: 
+
+$('.gfx-nav-trigger').on('click', function(e){ var target = $(e.target); var id = target.data('box-number'); $('#gfx-container').toggleClass('gfx-show-box-'+id) })

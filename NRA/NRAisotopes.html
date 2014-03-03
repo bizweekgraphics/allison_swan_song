@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>NRA isotopes</title> 
+		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.isotope.js"></script>
+  
+  
+	<link rel="stylesheet" href="NRAstyleNEW.css" type="text/css" media="screen" charset="utf-8">  
+</head>
+<body class="demos">
+
+<div id="bwg-shell">
+
+<!--[if lt IE 9]>
+<style type="text/css">
+#bwg-shell{
+	display:none
+	}
+</style>
+
+<img src="NRA.jpg">
+
+<![endif]-->
+
+
+	<div id="content"> 
+	
+		<div id="filters1-container" style="left:135px;top:0px;" class="combo-filters">
+	
+			<h4 class="list-header">Filter by corporate sponsors and their donation</h4>
+	
+  			<div id="filter1-options" class="clearfix option-combo money">
+  			
+   				<ul id="filters-money" class="filter option-set clearfix" data-filter-group="money">
+        			<li class="one"><a href="#filter-money-any" data-filter-value class="selected">All</a></li>
+        			<li class="one"><a href="#filter-money-one" data-filter-value=".one">$5M-$10M</a></li>
+        			<li class="one"><a href="#filter-money-two" data-filter-value=".two">$1M-$4.9M</a></li>
+        			<li class="one"><a href="#filter-money-three" data-filter-value=".three">$500K-$999K</a></li>
+        			<li class="one"><a href="#filter-money-four" data-filter-value=".four">$250K-$499K</a></li>
+        			<li class="one"><a href="#filter-money-five" data-filter-value=".five">$100K-$249K</a></li>
+        			<li class="one"><a href="#filter-money-six" data-filter-value=".six">$50K-$99K</a></li>
+        			<li class="one"><a href="#filter-money-seven" data-filter-value=".seven">$25K-$49K</a></li>
+    			</ul>
+
+  			</div> 
+		</div>
+  
+  <div id="filters2-container" style="left:0px;top:60px;" class="combo-filters"> 
+  	
+  	<div id="filter2-options" class="clearfix option-combo type">
+  		<h4 class="list-header">Filter by industry</h4>
+
+	<ul id="filters-type" class="filter option-set clearfix" data-filter-group="type">
+		<li class="all"><a href="#filter-money-any" data-filter-value class="selected">All</a></li>
+        <li class="manu"><a href="#filter-type-manu" data-filter-value=".manu" >Manufactures/<br>distributes guns</a></li>
+        <li class="sports"><a href="#filter-type-sports" data-filter-value=".sports">Outdoor sporting equipment</a></li>
+        <li class="arts"><a href="#filter-type-arts" data-filter-value=".arts">Arts/Advertising</a></li>
+        <li class="insurance"><a href="#filter-type-insurance" data-filter-value=".insurance">Insurance</a></li>
+        <li class="nonprofit"><a href="#filter-type-nonprofit" data-filter-value=".nonprofit">Nonprofit</a></li>
+        <li class="misc"><a href="#filter-type-arts" data-filter-value=".misc">Miscellaneous</a></li>
+    </ul>
+    </div>
+</div>	
+
+	<div id="side-text" style="left:820px;top:66px;"> 
+		<div id="bw-text"></div>
+	</div>
+	
+	<div id="container" class="variable-sizes clearfix isotope " style="position: aboslute; left:135px;top:10px; overflow: hidden; width: auto; height: 480px; ">
+    
+          
+    <div class="bw-rollover money-type company one sports   width1 height2 isotope-item " id="bw-rollover-1" data-headline="Midway USA" data-summary="The NRA Round-Up program, created by Midway USA, has contributed more than $5 million to the NRA’s lobbying arm alone">
+      <h3 class="name">Midway USA</h3>
+    </div>
+    
+          
+    <div class="bw-rollover money-type company manu  two   width1 height2   isotope-item" id="bw-rollover-2" data-headline="Beretta USA" data-summary="The gun maker donated $1 million to the NRA’s Institute for Legislative Action (NRA-ILA) and Civil Rights Defense Fund to work to overturn gun control laws.">
+      <p class="two"></p>
+      <h3 class="name">Beretta USA</h3>
+       </div>
+    
+          
+    <div class="bw-rollover money-type company misc two    width11 height2  isotope-item" id="bw-rollover-3" data-headline="Clayton Williams Energy" data-summary="Oil and natural gas exploration and production">
+      <p class="two"></p>
+      <h3 class="name">Clayton Williams Energy</h3>
+    </div>
+    
+          
+    <div class="bw-rollover money-type company manu two   width10 height2  isotope-item" id="bw-rollover-4" data-headline="Pierce Bullet Seal Target Systems" data-summary="Gun accessories manufacturer">
+      <p class="two"></p>
+      <h3 class="name">Pierce Bullet Seal Target Systems</h3>
+    </div>
+
+    
+     <div class="bw-rollover money-type company manu two   width12 height2  isotope-item" id="bw-rollover-6" data-headline="Springfield Armory" data-summary="Manufacturer of firearms and accessories, founded in 1777">
+      <h3 class="name">Springfield Armory</h3>
+    </div>
+    
+        
+     <div class="bw-rollover money-type company manu  three    width1 height2  isotope-item"  data-headline="Benelli USA" data-summary="Italian firearm manufacturer founded in 1967 as an offshoot of the Benelli motorcycle factory"  >
+      <h3 class="name">Benelli USA</h3>
+    </div>
+    
+             
+    <div class="bw-rollover money-type company arts three  width7 height2  isotope-item" id="bw-rollover-8" data-headline="Big Sky Carvers" data-summary="Outdoor-inspired wildlife wood carvings">
+      <h3 class="name">Big Sky Carvers</h3>
+    </div> 
+    
+          
+    <div class="bw-rollover money-type company manu three   width6 height2  isotope-item" id="bw-rollover-7" data-headline="Brownells" data-summary="Gun parts and accessories supplier owned by NRA board member Pete Brownell, who supports a closer relationship between gun makers and the NRA.">
+      <h3 class="name">Brownells</h3>
+    </div>
+          
+    <div class="bw-rollover money-type company sports three  width6 height2  isotope-item" data-headline="Cabela's" data-summary="Hunting, fishing, and outdoor sports retailer " >
+      <h3 class="name">Cabela's</h3>
+    </div>
+    
+          
+    <div class="bw-rollover money-type company manu  three    width3 height2  isotope-item"  data-headline="Dillion Precision Products" data-summary="Manufacturer of gun reloading equipment and accessories"   >
+      <h3 class="name">Dillon Precision Products</h3>
+    </div>
+
+        <div class="bw-rollover money-type company manu three width12 height2  isotope-item"  data-headline="Leupold & Stevens" data-summary="Manufacturer of gun sights and other accessories">
+      <h3 class="name">Leupold & Stevens</h3>
+    </div>
+          
+
+          
+    <div class="bw-rollover money-type company manu three    width21 height2  isotope-item" data-headline="Sturm, Ruger" data-summary="Manufactures guns, gun accessories, and ammunition magazines" >
+      <h3 class="name">Sturm, Ruger</h3>
+    </div>
+    
+     <div class="bw-rollover money-type company misc three   width11 height2  isotope-item" data-headline="Universal Coin & Bullion" data-summary="Gold and silver dealer"  >
+      <h3 class="name">Universal Coin & Bullion</h3>
+    </div>
+          
+    <div class="bw-rollover money-type company manu three  width16 height2  isotope-item" data-headline="Winchester Division - Oline Corp." data-summary="Two years ago, awarded a five-year contract worth about $300 million with the U.S. Army for the production of ammunition">
+      <h3 class="name">Winchester Division - Olin Corp.</h3>
+    </div>
+    
+     <div class="bw-rollover money-type company manu  three width9 height2  isotope-item" data-headline="Xe" data-summary="Formerly known as Blackwater">
+      <h3 class="name">Xe</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  four width1 height2  isotope-item"  data-headline="Davidson's" data-summary="Distrubutes guns, high-capacity ammunition magazines, and gun accessories">
+      <h3 class="name">Davidson's</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  four width20 height2  isotope-item" data-headline="Turnbull Manufacturing" data-summary="Restoration of antique firearms">
+        <h3 class="name">Turnbull Manufacturing</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  four width12 height2  isotope-item" data-headline="Greg Martin Auctions" data-summary="Specializes in antique firearms" >
+      <h3 class="name">Greg Martin Auctions</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  four width7 height2  isotope-item" data-headline="Hodgdon Powder" data-summary="Gun accessories manufacturer"  >
+      <h3 class="name">Hodgdon Powder</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company insurance  four width28 height2  isotope-item" data-headline="Lockton" data-summary="Insurance company">
+      <h3 class="name">Lockton</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company sports  four width3 height2  isotope-item"  data-headline="Natchez Shooters Supplies" data-summary="Supplier of hunting and shooting sports products">
+      <h3 class="name">Natchez Shooters Supplies</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company sports  five width21 height2  isotope-item"  data-headline="Action Target" data-summary="Manufacturer of shooting range products and equipment">
+      <h3 class="name">Action Target</h3>
+    </div>
+    
+      <div class="bw-rollover money-type company manu  five width1 height2  isotope-item" data-headline="Arsenal Inc." data-summary="Manufactures semiautomatic rifles" >
+      <h3 class="name">Arsenal Inc.</h3>
+    	</div>
+
+    
+      <div class="bw-rollover money-type company manu  five width3 height2  isotope-item"    data-headline="Blackhawk! Products Group" data-summary="Manufactures and distributes gun accessories" >
+      <h3 class="name">Blackhawk! Products Group</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  five width11 height2  isotope-item"   data-headline="Blue Book Publications" data-summary="Appraises guns"  >
+      <h3 class="name">Blue Book Publications</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  five width28 height2  isotope-item"    data-headline="Brunton" data-summary="Distributes gun accessories." >
+      <h3 class="name">Brunton</h3>
+    </div>
+    
+        
+    <div class="bw-rollover money-type company manu  five width12 height2  isotope-item"   data-headline="CDNN Investments" data-summary="Distributes high-capacity ammunition magazines and gun accessories."  >
+      <h3 class="name">CDNN Investments</h3>
+    </div>
+    
+        <div class="bw-rollover money-type company arts  five width32 height2  isotope-item"    data-headline="Collectors Firearms" data-summary="Retailer of modern and antique firearms" >
+      <h3 class="name">Collectors Firearms</h3>
+    </div>
+    
+    
+    <div class="bw-rollover money-type company manu  five width21 height2  isotope-item" data-headline="Crimson Tracy" data-summary="Manufacturer of laser sights for a variety of guns" >
+      <h3 class="name">Crimson Trace</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  five width2 height2  isotope-item"    data-headline="DBS International" data-summary="Data hosting and recovery services" >
+      <h3 class="name">DBS International</h3>
+    </div>
+
+    
+     
+    <div class="bw-rollover money-type company misc five   width12 height2  isotope-item" data-headline="Independence Tube" data-summary="Manufactures steel tubing">
+      <h3 class="name">Independence Tube</h3>
+    </div>
+    
+        
+    <div class="bw-rollover money-type company arts  five width3 height2  isotope-item"    data-headline="James D. Julia Auctioneers" data-summary="Auction house specializing in Americana, firearms, lamps, and toys" >
+      <h3 class="name">James D. Julia Auctioneers</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  five width7 height2  isotope-item"   data-headline="Kamps Propane" data-summary="Sells propane appliances"  >
+      <h3 class="name">Kamps Propane</h3>
+    </div>
+
+    
+    <div class="bw-rollover money-type company misc  five width14 height2  isotope-item"   data-headline="MetaMedia Training International" data-summary="Technology training"  >
+      <h3 class="name">MetaMedia Training International</h3>
+    </div>
+
+      
+    <div class="bw-rollover money-type company nonprofit  five width20 height2  isotope-item"    data-headline="Mzuri Wildlife Foundation" data-summary="Foundation that preserves wild game animals and their natural environment" >
+      <h3 class="name">Mzuri Wildlife Foundation</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  five width18 height2  isotope-item"    data-headline="Nosler" data-summary="Manufactures guns and gun accessories" >
+      <h3 class="name">Nosler</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company arts  five width14 height2  isotope-item"    data-headline="National Firearms Museum Store" data-summary="NRA's gun museum in Fairfax, Va." >
+      <h3 class="name">National Firearms Museum Store</h3>
+    </div>
+
+    
+    <div class="bw-rollover money-type company manu  five width2 height2  isotope-item" data-headline="Numrich Gun Parts" data-summary="Originally opened as a sporting goods store in the 1950s, Numrich Arms now manufactures and sells ammunition and gun accessories" >
+      <h3 class="name">Numrich Gun Parts</h3>
+    </div>
+        
+    <div class="bw-rollover money-type company manu  five width6 height2  isotope-item"   data-headline="Para USA" data-summary="Handgun manufacturer. As of June 6, 2012, Para operates as a subsidiary of Freedom Group"  >
+      <h3 class="name">Para USA</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  five width12 height2  isotope-item"   data-headline="Telecom Brokerage" data-summary="Phone, Internet, cloud, and wireless services"  >
+      <h3 class="name">Telecom Brokerage</h3>
+    </div>
+
+  	<div class="bw-rollover money-type company misc  six width6 height2  isotope-item"   data-headline="Allbaugh" data-summary="NRA board member Joe Allbaugh's lobbying and consulting firm"  >
+      <h3 class="name">Allbaugh</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  six width6 height2  isotope-item"  data-headline="AmeriCap" data-summary="Custom hat manufacturer"   >
+      <h3 class="name"> AmeriCap</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  six width2 height2  isotope-item"  data-headline="AuctionArms<br>.com" data-summary="Online gun auction site"   >
+      <h3 class="name">AuctionArms.com</h3>
+    </div>
+    
+        
+    <div class="bw-rollover money-type company manu  six width6 height2  isotope-item"   data-headline="Browning" data-summary="Founded in 1878 and based in Morgan, Utah, Browning manufactures firearms, firearms accessories, and sporting goods."  >
+      <h3 class="name">Browning</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company nonprofit  six width20 height2  isotope-item"    data-headline="Camp-Younts Foundation" data-summary="Typically funds parks, playgrounds, hospitals, and charities" >
+      <h3 class="name">Camp-Younts Foundation</h3>
+    </div>
+    
+     <div class="bw-rollover money-type company manu  six width1 height2  isotope-item"    data-headline="Cisco Ford" data-summary="New Holland farm and construction equipment" >
+      <h3 class="name"> Cisco Ford</h3>
+    </div>
+
+ 	<div class="bw-rollover money-type company arts  six width20 height2  isotope-item"    data-headline="Dale Gallon Historical Art" data-summary="Civil war antiques art gallery." >
+      <h3 class="name">Dale Gallon Historical Art</h3>
+    </div>
+    
+      
+    <div class="bw-rollover money-type company manu  six width12 height2  isotope-item"   data-headline="DPMS Panther Arms" data-summary="Cerberus, a New York-based buyout firm, merged DPMS with Freedom Group, which manufactures Bushmaster firearms"  >
+      <h3 class="name">DPMS Panther Arms</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  six width6 height2  isotope-item"    data-headline="FNH USA" data-summary="Sells firearms, high-capacity ammunition magazines, and gun accessories." >
+      <h3 class="name">FNH USA</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company sports  six width1 height2  isotope-item"   data-headline="Gamo USA" data-summary="Air gun manufacturer"  >
+      <h3 class="name">Gamo USA</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  six width18 height2  isotope-item"   data-headline="Glock" data-summary="Manufactures and sells guns—claims to have 65 percent of the American law-enforcement market."  >
+      <h3 class="name">Glock</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  six width1 height2  isotope-item"   data-headline="Graf & Sons" data-summary="Sells high-capacity ammunition magazines and gun accessories."  >
+      <h3 class="name"> Graf & Sons</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  six width21 height2  isotope-item"   data-headline="LPL Financial" data-summary="Distributor of financial products to financial advisers and institutions in the U.S."  >
+      <h3 class="name">LPL Financial</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  six width12 height2  isotope-item"  data-headline="Salsbury Industries" data-summary="Provider of construction and electrical services for heavy industry"   >
+      <h3 class="name">Salsbury Industries</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  six width7 height2  isotope-item"  data-headline="Smith & Wesson" data-summary="Manufactures and distributes firearms and firearm accessories to law enforcement personnel, military agencies, and security professionals."   >
+      <h3 class="name">Smith & Wesson</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  six width5 height2  isotope-item"   data-headline="Widener's Reloading & Shooting Supply" data-summary="Distributes guns, high-capacity ammunition magazines, and gun accessories."  >
+      <h3 class="name">Widener’s Reloading & Shooting Supply</h3>
+    </div>
+    
+     <div class="bw-rollover money-type company arts  seven width12 height2  isotope-item"   data-headline="Ackerman McQueen" data-summary="Advertising agency in Oklahoma"  >
+      <h3 class="name">Ackerman McQueen</h3>
+    </div>
+    
+	<div class="bw-rollover money-type company sports  seven width6 height2  isotope-item"   data-headline="AcuSport" data-summary="Outdoor and shooting sports products distributor"  >
+      <h3 class="name">AcuSport</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  seven width21 height2  isotope-item" data-headline="BCN Telecom" data-summary="New Jersey-based telecommunications company">
+      <h3 class="name">BCN Telecom</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  seven width4 height2  isotope-item"   data-headline="Charlotte Motor Speedway" data-summary="Board member and former NASCAR driver and current team owner Richard Childress races here"  >
+      <h3 class="name">Charlotte Motor Speedway</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company sports  seven width2 height2  isotope-item"   data-headline="Cheaper Than Dirt" data-summary="Online retailer of shooting sports products"  >
+      <h3 class="name">Cheaper Than Dirt</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company misc  seven width22 height2  isotope-item"  data-headline="Component Engineers" data-summary="Manufacturer of metal and plastic components"   >
+      <h3 class="name">Component Engineers</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width17 height2  isotope-item"   data-headline="Ellet Brothers" data-summary="Firearms distributor"  >
+      <h3 class="name">Ellett Brothers</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width21 height2  isotope-item"    data-headline="H&R Firearms" data-summary="Gun manufacturer, subsidiary of Freedom Group" >
+      <h3 class="name">H&R Firearms</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width22 height2  isotope-item"   data-headline="Hornady Manufacturing" data-summary="Manufacturer of ammunition and accessories"  >
+      <h3 class="name">Hornady Manufacturing</h3>
+    </div>
+        
+    <div class="bw-rollover money-type company manu  seven width7 height2  isotope-item"   data-headline="John Rigby & Co." data-summary="Texas-based company that manufactures guns in London"  >
+      <h3 class="name">John Rigby & Co.</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width22 height2  isotope-item"    data-headline="Krieghoff International" data-summary="Gun manufacturer" >
+      <h3 class="name">Krieghoff International</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width21 height2  isotope-item"    data-headline="KS Industries" data-summary="Engineering and construction company" >
+      <h3 class="name">KS Industries</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company insurance  seven width17 height2  isotope-item"   data-headline="Lockton Affinity" data-summary="Insurance and risk management company"  >
+      <h3 class="name">Lockton Affinity</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company arts  seven width7 height2  isotope-item"   data-headline="Loon Lake Decoy" data-summary="Outdoor-inspired wildlife wood carvings"  >
+      <h3 class="name">Loon Lake Decoy</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width7 height2  isotope-item"   data-headline="Marlin Firearms" data-summary="Rifle manufacturer"  >
+      <h3 class="name">Marlin Firearms</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width13 height2  isotope-item"  data-headline="McMillan Group" data-summary="Gun manufacturer"   >
+      <h3 class="name">McMillan Group International</h3>
+    </div>
+        
+     <div class="bw-rollover money-type company misc  seven width21 height2  isotope-item"   data-headline="Optima Direct" data-summary="Telemarketing management services"  >
+      <h3 class="name">Optima Direct</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company sports  seven width1 height2  isotope-item"   data-headline="Pyramyd Air" data-summary="Online retailer of air guns"  >
+      <h3 class="name">Pyramyd Air</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width3 height2  isotope-item"   data-headline="RCBS Reloading Equipment" data-summary="Reloading equipment and accessories manufacturer"  >
+      <h3 class="name">RCBS Reloading Equipment</h3>
+    </div>
+ 
+	<div class="bw-rollover money-type company manu  seven width21 height2  isotope-item"   data-headline="Reinhart Fajen" data-summary="Gunstock manufacturer, subsidiary of Battenfeld Technologies"  >
+      <h3 class="name">Reinhart Fajen</h3>
+    </div> 
+    
+  	<div class="bw-rollover money-type company manu  seven width7 height2  isotope-item"   data-headline="Remington Arms" data-summary="Gun manufacturer, founded in 1816"  >
+      <h3 class="name">Remington Arms</h3>
+    </div>
+       
+    <div class="bw-rollover money-type company misc  seven width4 height2  isotope-item"   data-headline="Security Equipment Corp." data-summary="Personal safety equipment and defense training"  >
+      <h3 class="name">Security Equipment Corp.</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width6 height2  isotope-item"    data-headline="SIG Arms" data-summary="Gun manufacturer. Clients include U.S. Navy SEALs, Federal Air Marshal Service, Department of Homeland Security, and Coast Guard" >
+      <h3 class="name">SIG Arms</h3>
+    </div>
+    
+    <div class="bw-rollover money-type company manu  seven width12 height2  isotope-item"    data-headline="Sinclair International" data-summary="Gun manufacturer owned by Brownells" >
+      <h3 class="name">Sinclair International</h3>
+    </div>
+    
+     <div class="bw-rollover money-type company misc  seven width10 height2  isotope-item"     data-headline="St. Louis Antique Arms Association" data-summary="Group formed 'to support and protect the rights and freedoms ... granted under the 2nd amendment'">
+      <h3 class="name">St. Louis Antique Arms Association</h3>
+    </div>
+
+    <div class="bw-rollover money-type company manu  seven width19 height2  isotope-item"   data-headline="Stanton Barrett Motorsports Management" data-summary="North Carolina Nascar team"  >
+      <h3 class="name">Stanton Barrett Motorsports Management</h3>
+    </div>
+    
+     <div class="bw-rollover money-type company sports  seven width1 height2  isotope-item"  data-headline="Umarex USA" data-summary="Air gun supplier"   >
+      <h3 class="name">Umarex USA</h3>
+    </div>
+
+    
+    <div class="bw-rollover money-type company misc  seven width12 height2  isotope-item"   data-headline="Werner Enterprises" data-summary="Freight transportation provider"  >
+      <h3 class="name">Werner Enterprises</h3>
+    </div>
+    
+  </div>
+		 
+</div>
+
+</div>
+  
+  
+  
+<script src="http://static.btrd.net/assets/audience_science-6b92a9ec19bfc22a174b877a4573216a.js" type="text/javascript"></script>
+<script>
+$(function(){
+    
+    var $container = $('#container'),
+        filters = {};
+
+    $container.isotope({
+      itemSelector : '.money-type',
+      masonry: {
+        columnWidth: 10
+      }
+    });
+
+    // filter buttons
+    $('.filter a').click(function(){
+      var $this = $(this);
+      // don't proceed if already selected
+      if ( $this.hasClass('selected') ) {
+        return;
+      }
+      
+      var $optionSet = $this.parents('.option-set');
+      // change selected class
+      $optionSet.find('.selected').removeClass('selected');
+      $this.addClass('selected');
+      
+      // store filter value in object
+      // i.e. filters.color = 'red'
+      var group = $optionSet.attr('data-filter-group');
+      filters[ group ] = $this.attr('data-filter-value');
+      // convert object into array
+      var isoFilters = [];
+      for ( var prop in filters ) {
+        isoFilters.push( filters[ prop ] )
+      }
+      var selector = isoFilters.join('');
+      $container.isotope({ filter: selector });
+
+      return false;
+    });
+
+
+      
+      // filter items when filter link is clicked
+	$('#filters a').click(function(){
+		var selector = $(this).attr('data-filter');		
+		$container.isotope({ filter: selector });
+		
+		var $this = $(this);
+		if ( $this.hasClass('selected') ) {
+			return false;
+		}
+		var $filterSet = $this.parents('.option-set');
+        $filterSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');		
+		return false;
+	});
+
+
+      
+      
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+   
+    
+    $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+			if ($this.hasClass('asc')){
+				$this.removeClass('asc').addClass('desc');
+			} else if ($this.hasClass('desc')) {
+				$this.removeClass('desc').addClass('asc');
+			}
+        }
+        
+        
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+        
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+		options[ 'sortAscending' ] = $this.hasClass('asc');
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // otherwise, apply new options
+          $container.isotope( options );
+        }
+        
+        $('#container').find('.rank').removeClass('hilite-active');
+		$('#container').find('.name').removeClass('hilite-active');
+		$('#container').find('.weight').removeClass('hilite-active');
+		$('#container').find('.revenue').removeClass('hilite-active');
+		$('#container').find('.eps').removeClass('hilite-active');
+		if (( value === 'rank') || ( value === 'name')) {
+			return false;
+		} else {
+			$('#container').find('.'+value).addClass('hilite-active');
+		}
+
+        
+        return false;
+        
+        
+      });
+      
+		var defaultdesc = '<h4>Company</h4>'+'<hr>'+'Roll over a company name to view its description';
+		$('#bw-text').html('<p>'+defaultdesc+'</p>');
+	
+	$('.bw-rollover').on('mouseover', function(){
+		var headline = $(this).data('headline'),
+			summary = $(this).data('summary');
+		$(this).addClass('bw-active');
+		$('#bw-text').html('<h4>'+headline+'</h4>'+'<hr>'+'<p>'+summary+'</p>');
+	  });
+		
+	$('.bw-rollover').on('mouseout', function(){
+		$(this).removeClass('bw-active');
+		$('#bw-text').html('<p>'+defaultdesc+'</p>');
+	  });
+
+});
+     
+     
+
+
+    
+  </script>
+
+ 
+</body>
+</html>

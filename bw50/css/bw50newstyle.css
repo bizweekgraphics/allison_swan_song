@@ -1,0 +1,695 @@
+
+/**** Base styles ****/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  padding: 5px;
+  font-family: 'Helvetica', 'Helvetica Regular', 'Lucida Grande', 'Helvetica Unicode', Arial, sans-serif;
+  font-size: 13px;
+}
+
+#content {
+  width:960px;
+}
+
+
+#container {
+  padding: 2px;
+  position:relative;
+  width:870px;
+}
+
+#container .hilite-active {
+	color: #000;
+	background-color:#FFF;
+	padding: 2px 3px 0px 3px;
+}
+
+
+h1, h2, h3, p, ul, ol, pre, dl {
+  margin-bottom: 0.5em;
+}
+
+
+h1, h2, h3 { 
+font-weight: bold; 
+display:block;
+}
+
+
+h1 {
+  font-size: 32px;
+  line-height: 1.1em;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.1em;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+}
+
+/* link styles */
+
+
+.name a,
+a code { 
+  color: #000; 
+  line-height:1.0em;
+  text-decoration:none;
+}
+
+
+.name a:hover,
+a:hover code { 
+  color: #FFF; 
+  line-height:1.0em;
+}
+
+.company .ticker-large1 a,
+	a code{
+  color: #000;
+  text-decoration:none;
+}
+
+.company .ticker-large2 a,
+	a code{
+  color: #000;
+  text-decoration:none;
+}
+
+.company .question a,
+a code{
+  color: #000;
+  text-decoration:none;
+  white-space: nowrap;
+}
+
+.company .question-2 a,
+a code{
+  color: #000;
+  text-decoration:none;
+  white-space: nowrap;
+}
+
+.company .ticker-large1 a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .ticker-large2 a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .ticker-large3 a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .ticker-height a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .ticker-height2 a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+
+.company .ticker-width a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .ticker-width2 a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .ticker-large3 a,
+a code{
+  color: #000;
+  text-decoration:none;
+}
+
+.company .ticker-height a,
+a code{
+  color: #000;
+  text-decoration:none;
+}
+
+.company .ticker-height2 a,
+a code{
+  color: #000;
+  text-decoration:none;
+}
+
+
+.company .ticker-width a,
+a code{
+  color: #000;
+  text-decoration:none;
+}
+
+.company .ticker-width2 a,
+a code{
+  color: #000;
+  text-decoration:none;
+}
+
+.company .video a,
+a code{
+  color: #000;
+  text-decoration:none;
+  white-space: nowrap;
+}
+
+.company .video a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .video-2 a,
+a code{
+  color: #000;
+  text-decoration:none;
+  white-space: nowrap;
+}
+
+.company .video-2 a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .video-3 a,
+a code{
+  color: #000;
+  text-decoration:none;
+  white-space: nowrap;
+}
+
+.company .video-3 a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+.company .video-4 a,
+a code{
+  color: #000;
+  text-decoration:none;
+  white-space: nowrap;
+}
+
+.company .video-4 a:hover,
+a:hover code{
+  color: #FFF;
+}
+
+
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  height: 100%;
+}
+
+
+/* company styles */
+
+.company {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #888;
+  color: #222;
+
+        
+}
+
+
+.company.consum-dis  { background: #6699FF; opacity:.9; }
+.company.consum-sta        { background: #FFAD5C; }
+.company.energy  { background: #2EB8B8;opacity:.9; }
+.company.finance  { background: #cc66cc;opacity:.9; }
+.company.health       { background: #FFD633;opacity:.9; }
+.company.industrials       { background: #99cc33;opacity:.9;}
+.company.tech       { background: #CC3300;opacity:.9; }
+.company.materials         { background: #FFB8DB; }
+
+.company * {
+  position: absolute;
+  margin: 0;
+}
+
+/* ticker styles */
+
+.company .ticker-large1 {
+  left: 1.0em;
+  top: 3.0em;
+  font-size: 0.6em;
+  color: #000;
+}
+
+.company .ticker-large2 {
+  left: 1.0em;
+ 	top: 5.0em;
+  font-size: 0.6em;
+  color: #000;
+}
+
+.company .ticker-large3 {
+  left: 1.0em;
+ 	top: 6.8em;
+  font-size: 0.6em;
+  color: #000;
+}
+
+.company .ticker-height {
+  left: 0.5em;
+  top: 4.2em;
+  font-size: 1.0em;
+  color: #000;
+}
+
+.company .ticker-height2 {
+  left: 0.5em;
+  top: 1.6em;
+  font-size: 1.0em;
+  color: #000;
+}
+
+
+.company .ticker-width {
+  left: 0.6em;
+  top: 1.7em;
+  font-size: 1.0em;
+  color: #000;
+}
+
+.company .ticker-width2 {
+  left: 0.5em;
+  top: 3.0em;
+  font-size: 1.0em;
+  color: #000;
+}
+
+.company .name {
+  left: 0.5em;
+  top: 0.5em;
+  font-size: 1.2em;
+  line-height: 1.0em;
+  color: #000;
+  opacity:100%;
+  width:15px;
+}
+
+.company.large .name {
+ left: 0.2em;
+  top: 0.5em;
+  font-size: 1.2em;
+  line-height: 1.0em;
+  color: #000;
+
+}
+
+.company .weight {
+left: 0.5em;
+  bottom: 2.5em;
+  font-size: 1.0em;
+  color: #000;
+}
+
+.company .revenue {
+  font-size: 1.0em;
+  left: 0.5em;
+  bottom: 1.4em;
+  color: #000;
+}
+
+.company .eps {
+  font-size: 1.0em;
+  left: 0.5em;
+  bottom: 0.3em;
+  color: #000;
+}
+
+.company .rank {
+  font-size: 1.2em;
+  color: #FFF;
+  right: 0.5em;
+  top: 0.4em;
+  color: #000;
+}
+
+.company .rank-large {
+  font-size: 1.2em;
+  color: #FFF;
+  right: 0.5em;
+  top: 0.5em;
+  color: #000;
+}
+
+
+
+.company .question {
+	left: 1.0em;
+  top: 5.0em;
+  font-size: 0.5em;
+  color: #000;
+  font-style:italic;
+  line-height:1.0em;
+}
+
+.company .question-2 {
+	left: 1.0em;
+  top: 7.5em;
+  font-size: 0.5em;
+  color: #000;
+  font-style:italic;
+  line-height:1.0em;
+}
+
+.company .video {
+left: 0.4em;
+  top: 4.2em;
+  font-size: 1.0em;
+  color: #000;
+  font-style:italic;
+  line-height:1.0em;
+}
+
+.company .video-4 {
+left: 0.4em;
+  top: 4.0em;
+  font-size: 1.0em;
+  color: #000;
+  font-style:italic;
+  line-height:1.0em;
+}
+
+.company .video-2 {
+left: 0.4em;
+  top: 2.8em;
+  font-size: 1.0em;
+  color: #000;
+  font-style:italic;
+  line-height:1.0em;
+}
+
+.company .video-3 {
+left: 1.0em;
+  top: 8.6em;
+  font-size: 0.5em;
+  color: #000;
+  font-style:italic;
+  line-height:1.0em;
+}
+
+
+
+.company .question a:hover {
+	color:#FFF;
+	line-height:1.0em;	
+}
+
+.company .question-2 a:hover {
+	color:#FFF;
+	line-height:1.0em;	
+}
+  
+
+.variable-sizes .company.width2 { width: 230px; }
+
+.variable-sizes .company.height2 { height: 230px; }
+
+.variable-sizes .company.width2.height2 {
+  font-size: 2.0em;
+}
+
+.company.large,
+.variable-sizes .company.large,
+.variable-sizes .company.large.width2.height2 {
+  font-size: 3.0em;
+  width: 350px;
+  height: 350px;
+  z-index: 100;
+}
+
+.clickable .company:hover {
+  cursor: pointer;
+}
+
+.clickable .company:hover h3 {
+  text-shadow:
+    0 0 10px white,
+    0 0 10px white
+  ;
+}
+
+.clickable .company:hover h2 {
+  color: white;
+}
+
+
+
+/**** Nav Styles  ****/
+
+
+
+#filters-container {
+	width:100px;
+	position:relative;
+	float:left;	
+	padding-top:7px;
+}
+
+#sort-container {
+	position:relative;
+	display:block;
+}
+
+.list-header {
+	font-weight:bold;
+	padding-bottom: 0.5em;
+	border-bottom:1px solid #B2B2B2;
+	}
+
+
+#options ul {
+  margin: 0;
+  list-style: none;
+}
+
+#filter-options ul {
+  margin: 0;
+  list-style: none;
+}
+
+#options ul li a.selected.asc:after { 
+content: ' ▲'; line-height: 150%; font-size: 80%;
+}
+
+#options ul li a.selected.desc:after { 
+content: ' ▼'; line-height: 150%; font-size: 80%;
+}
+
+
+.sort-navigation li a {
+  color: #000;
+cursor: pointer;
+padding: 10px 10px 10px 10px ;
+font-family: "helvetica",arial;
+float: left;
+display: inline-block;
+text-align: left;
+font-weight:300;
+text-decoration:none;
+}
+
+
+
+.filter-navigation li a {
+color: #000;
+cursor: pointer;
+padding: 8px 8px 8px 8px ;
+font-family: "helvetica",arial;
+float: left;
+text-align: left;
+font-weight:300;
+line-height:1.0em;
+text-decoration:none;
+}
+
+
+.sort-navigation li a.selected {
+  background-color: #000;
+	padding: 10px 10px 10px 10px ;
+  text-shadow: none;
+  color: #FFF;
+  font-family: "helvetica",arial;
+  font-weight:300;
+
+}
+
+.filter-navigation li a.selected {
+  background-color: #000;
+padding: 8px 8px 8px 8px ;
+  text-shadow: none;
+  color: #FFF;
+  font-family: "helvetica",arial;
+  font-weight:300px;
+}
+
+  
+#options a:hover {
+  text-decoration:underline;
+}
+
+#options li a:active {
+  background-color: #000;
+  -webkit-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+     -moz-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+       -o-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+          box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+}
+
+
+
+.sort-navigation li:first-child a {
+  border-right: 1px solid		#B2B2B2;
+  font-weight:bold;
+}
+
+
+
+/* Commercial license blurb */
+
+.docs #commercial {
+  background: white;
+  padding: 10px;
+  font-size: 14px;
+  color: #1F1F1D;
+}
+
+.docs #commercial a { font-weight: bold;}
+
+
+
+/**** Infinite Scroll ****/
+
+#infscr-loading {
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+  left: 42%;
+  z-index: 100;
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.9 );
+  padding: 20px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}

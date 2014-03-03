@@ -1,0 +1,242 @@
+/* my style */
+
+#bwg-econ-shell{
+	width:950px;
+	font-family: Helvetica, arial, times;
+	margin:0px;
+	position:absolute;
+	}
+
+#bwg-econ-container{
+	width:950px;
+	float:left;
+	}
+
+.info {
+	font-family:Georgia;
+	font-size:11px;
+	}
+	
+
+.bwg-abspos{
+	position:absolute;
+}
+
+
+.header {
+	font-size:12px;
+	font-family:helvetica;
+	color:#808080;
+}
+
+#header-container {
+	position:aboslute;
+	left: 350px;
+	top: 50px;
+}
+
+
+.econ-text {
+	position:absolute;
+	width:150px;
+	height:30px;
+	font-size:11px;
+	font-family:Helvetica;
+	
+}
+
+
+
+/* bw fonts */
+
+@font-face{font-family:'BWHaasHead';src:url("http://www.businessweek.com/assets/type/hinted/haas/bwhaasgroteskhead-95black.eot?#iefix") format("eot"),url("http://www.businessweek.com/assets/type/hinted/haas/bwhaasgroteskhead-95black.woff") format("woff"),url("http://www.businessweek.com/assets/type/haas/bwhaasgroteskhead-95black.ttf") format("truetype");font-style:normal;font-weight:700;font-stretch:normal}
+
+/* blocks style */
+
+
+.ink-clearfix {
+  *zoom: 1;
+}
+.ink-clearfix:before,
+.ink-clearfix:after {
+  display: table;
+  content: "";
+}
+.ink-clearfix:after {
+  clear: both;
+}
+.cursor-grabbing {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+.ink-content-item {
+  background-color: #f0f4f5;
+  font-family: helvetica;
+  color: #333;
+  font-size: 12px;
+  font-weight:bold;
+	float: left;
+  display: inline;
+  border: 1px solid #ddd;
+  border-left: none;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+.ink-content-item:first-child {
+  border-left: 1px solid #ddd;
+}
+.ink-content-item:hover,
+.ink-content-item-active {
+  background: #fff;
+}
+.ink-content-item-active {
+  border-bottom: 1px solid #fff;
+  color: #000;
+}
+.ink-content-block {
+  display: none;
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  padding: 5px;
+}
+.ink-content-block-active {
+  display: block;
+}
+.ink-content-items {
+  *zoom: 1;
+}
+.ink-content-items:before,
+.ink-content-items:after {
+  display: table;
+  content: "";
+}
+.ink-content-items:after {
+  clear: both;
+}
+
+
+  display: block;
+  *zoom: 1;
+}
+
+.ink-content-pills {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.ink-content-pills .ink-content-items {
+	position:absolute;
+	right: 40px;
+	top: 31px;
+  margin: 0 0 10px;
+}
+.ink-content-pills .ink-content-item {
+  color: #999999;
+  font-size: 14px;
+  cursor: pointer;
+  float: left;
+  padding: 10px 10px 10px 5px;
+  border-top: solid 1px #CCC;
+  border-bottom: solid 1px #CCC;
+  border-left: solid 1px #CCC;
+  background: #FFFFFF;
+  margin: 0;
+  width:190px;
+  height:30px;
+  text-align:center;
+}
+.ink-content-pills .ink-content-item-active {
+  color: black;
+  background: #E9E9E9;
+
+}
+.ink-content-pills .ink-content-item:first-child {
+ 
+}
+.ink-content-pills .ink-content-item:last-child {
+
+}
+.ink-content-pills .ink-content-block {
+  border: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+/* ----------------------------------------------------- highlight styles */
+
+.ink-clearfix {
+  *zoom: 1;
+}
+.ink-clearfix:before,
+.ink-clearfix:after {
+  display: table;
+  content: "";
+}
+.ink-clearfix:after {
+  clear: both;
+}
+.cursor-grabbing {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+.ink-tooltip {
+  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width:250px;
+  z-index: 1000;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-family: arial, sans-serif;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: arial,helvetica,sans-serif;
+  font-size:13px;
+}
+
+#bwg-econ-container .scene-1,
+#bwg-econ-container .scene-2,
+#bwg-econ-container .scene-3 {
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  -moz-transition: -moz-transform 1s ease-in-out;  
+}
+
+#bwg-econ-container.scene-1-active .scene-1,
+#bwg-econ-container.scene-2-active .scene-2,
+#bwg-econ-container.scene-3-active .scene-3{
+/*  -webkit-transform: -webkit-translate(5px,5px) -webkit-scale(1.1);*/
+	}
+
+
+#bwg-econ-container.scene-1-active .scene-1.scene-a{
+stroke: #00ACD1;
+}
+#bwg-econ-container.scene-1-active .scene-1.scene-b{
+fill: #00ACD1;
+}
+
+#bwg-econ-container.scene-2-active .scene-2.scene-a{
+stroke: #000000; 
+}
+
+#bwg-econ-container.scene-2-active .scene-2.scene-b{
+fill: #000000; 
+}
+
+#bwg-econ-container.scene-3-active .scene-3.scene-a{
+stroke: #ED1C24; 
+}
+
+#bwg-econ-container.scene-3-active .scene-3.scene-b{
+fill: #ED1C24; 
+}
+
+
+

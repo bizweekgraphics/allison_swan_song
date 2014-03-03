@@ -1,0 +1,293 @@
+<html>
+  <head>
+    <style>
+
+
+ @font-face {
+      font-family:'BWHaasHead';
+      src:url('fonts/bwhaasgroteskhead-95black.eot?#iefix') format('eot'),
+      url('fonts/bwhaasgroteskhead-95black.woff') format('woff'),
+      url('fonts/bwhaasgroteskhead-95black.ttf') format('truetype');
+      font-style:normal;
+      font-weight:700;
+      font-stretch:normal
+      }
+
+      body {
+        font-family: Helvetica;
+      }
+
+      .axis {
+    fill: none;
+    stroke: black;
+    stroke-width:1px;
+    shape-rendering: crispEdges;
+}
+
+.axis text { display: none; }
+
+
+#tooltip{
+        padding-left:10px;
+        padding-right: 10px;
+         background: rgba(255, 255, 255, 0.95);
+        position: absolute;
+        border: 1px solid #ddd;
+      -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        height: auto;
+        visibility: hidden;
+        z-index: 9999;
+        width: 225px;
+
+      }
+
+#key {
+  padding:5px;
+  font-family: 'BWHaasHead';
+  font-size: 14px;
+  position: absolute;
+  top:25px;
+  left:25px;
+}
+
+  #summers {
+    position: absolute;
+    top: 165px;
+        left: 10px;
+        width: 100px;
+        font-family:'BWHaasHead';
+        font-size: 18px;
+        text-align: center;
+  }
+
+ #yellen {
+  position: absolute;
+    top: 165px;
+        left: 790px;
+        width: 100px;
+        font-family:'BWHaasHead';
+        font-size: 18px;
+        text-align: center;
+  }
+
+  #person {
+    font-family:'BWHaasHead';
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #quote {
+    font-size: 14px;
+  }
+
+   #title {
+    font-size: 15px;
+  }
+
+
+ #source {
+    font-size: 14px;
+    font-style: italic;
+  }
+
+.person {
+  opacity:.5;
+  fill:#53b8b9;
+}
+
+    
+    </style>
+    
+  </head>
+  <body>
+
+<!--[if lt IE 9]>
+<style type="text/css">
+#svg{
+display:none
+}
+</style>
+
+
+<img src="job_meaning.jpg">
+
+<![endif]-->
+
+
+ 
+<div id="key">*Size of circle represents influence in the decision.</div>
+
+    <div id="graphic"></div>
+    <div id="tooltip">
+      <p><span id="person">name</span></br>
+      <span id="title">job title</span></p>
+      <p>"<span id="quote"></span>"
+      -<span id="source">source</span></p>
+    </div>
+
+
+
+<div id="summers">
+  <p>In favor of Summers </p>
+</div>
+
+<div id="yellen">
+  <p>In favor of Yellen</p>
+</div>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+
+<script>
+
+var fedChair = [{"person":"Barack Obama","title":"President","score":0,"influence":400,"quote":"I consider them both outstanding candidates.","source":"Obama press conference, August 9, 2013"},
+{"person":"Sheila Bair","title":"Former chairman of the Federal Deposit Insurance Corp.","score":90,"influence":40,"quote":"Yellen is clearly the most qualified successor to follow Ben Bernanke. There is no reason to pass her over for less-qualified males. Yellen already has a 'Y' in her name; she doesn't need one in her chromosomes.","source":"Fortunte, July 22, 2013"},
+{"person":"Paul Krugman","title":"Princeton University economist and New York Times columnist","score":30,"influence":30,"quote":"If the final choice isn't Janet Yellen, I think the president is going to have to offer a very good explanation of why not.","source":"The New York Times, July 19, 2013"},
+{"person":"Steven Rattner","title":"Chief adviser to Obama Administration on auto-industry bailout","score":-70,"influence":40,"quote":"No one is perfect, but I score Larry's batting average and qualifications at the top of the heap.","source":"The New York Times, August 2, 2013"},
+{"person":"Bette Midler","title":"singer and performer","score":95,"influence":10,"quote":"HUH.  The architect of bank deregulation, which turned straitlaced banks into casinos and bankers into pimps, may be next Head Fed: Summers.","source":"Bette Midler's Twitter feed, August 12, 2013"},
+{"person":"Mohamed El-Erian","title":"CEO of Pacific Investment Management Co., the world's biggest mutual fund","score":0,"influence":20,"quote":"What's really unfortunate is how public and polarized this debate has gotten.","source":"Bloomberg News, August 2, 2013"},
+{"person":"Bradford DeLong","title":"Economist, University of California-Berkeley","score":-50,"influence":30,"quote":"The situation is unclear and confused enough that we want really smart people serving as intellectual coordinators and traffic cops as the Obama-Biden administration assembles its policies.","source":"delong.typepad.com, July 31, 2013"},
+{"person":"Richard Durbin","title":"Senate Majority Whip ","score":60,"influence":50,"quote":"If Summers is the nominee, I sure would have a lot of questions to ask him. He's served several administrations, and I'd like to hear his point of view on the role of the Fed in terms of helping the middle class and creating jobs.","source":"Bloomberg News, July 30, 2013"},
+{"person":"Phil Angelides","title":"Chairman of the Financial Crisis Inquiry Commission","score":40,"influence":20,"quote":"Look, Larry Summers has given a lot of good service to this country. He has a very deep economic background, but he's been part of the Washington-Wall Street revolving door - and part of the group that helped cause so much damage. Yellen wasn't.","source":"San Francisco Chronicle, August 4, 2013"},
+{"person":"Nancy Pelosi","title":"House Minority Leader","score":65,"influence":60,"quote":"I think it would be great to have a woman, first woman, chairman of the Fed...She's extremely talented. It's not just that she's a woman.","source":"Bloomberg News, July 25, 2013"},
+{"person":"Roger Altman","title":"Chairman, Evercore Partners","score":-75,"influence":60,"quote":"I don't think there's a more battle-hardened veteran anywhere than Larry Summers.","source":"CNBC, August 2, 2013"},
+{"person":"Michael Barr","title":"Former assistant Treasury secretary for financial institutions","score":-85,"influence":40,"quote":"I wouldn't have gone to work for Larry if he didn't believe in financial regulation... He cares about this stuff. I know he'd implement Dodd-Frank. And I think his impatience, which some people don't like, would serve us well in this implementation phase.","source":"Bloomberg News, August 1, 2013"}
+];
+
+   </script>
+
+    <script>
+
+    var w = 875;
+    var h = 450;
+    var padding = 50; 
+
+
+
+    var rScale = d3.scale.sqrt()
+                  .domain([0,100])
+                  .range([1, 40]);
+
+    var xScale = d3.scale.linear()
+                  .domain([-100,100])
+                  .range([padding, w-padding]);
+
+    var yScale = d3.scale.linear()
+                  .domain([0,0])
+                  .range([150,0]);
+
+
+    var body = d3.select("body");
+
+
+
+    var svg = d3.select("#graphic")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+
+
+  var circle = svg.selectAll("circle")
+           .data(fedChair)
+           .enter()
+           .append("circle");
+    
+     circle.attr("class", "person")
+           .attr("r", function(d){ return rScale(d.influence) })
+           .attr("cx", function(d) { return xScale(d.score) })
+           .attr("cy", function(d,i){ return yScale(i) })
+           .attr("fill", "black")
+           .attr("stroke", "none")
+           .attr("stroke-width","1");
+   
+       var xAxis = d3.svg.axis()
+                  .scale(xScale)
+                  .orient("bottom")
+                  .ticks(1)
+                  .tickSize(15);
+
+
+    svg.append("g")
+    .attr("class", "axis")
+     .attr("transform", "translate(0,150)")
+     .style("stroke-width", "1px")
+    .call(xAxis);
+
+
+  svg.selectAll("circle")
+           .on("mouseover", function(d){
+              d3.select(this)
+                .transition()
+                .duration(100)
+                .style("opacity","1")
+                .style("stroke","black")
+                .style("stroke-weight","1")
+              d3.select("#tooltip")
+                   .style("left", (d3.event.pageX) - 125 + "px")
+                .style("top", (d3.event.pageY) + 75 + "px")
+                .transition()
+                .style("visibility","visible");
+              d3.select("#person")
+                .text(d.person);
+              d3.select("#title")
+                .text(d.title);
+                d3.select("#quote")
+                .text(d.quote );
+                d3.select("#source")
+                .text(d.source);
+           })
+
+
+           .on("mouseout", function(d){
+              d3.select(this)
+              .transition()
+                .style("opacity",".5")
+                .style("stroke","none")
+                .style("stroke-weight","0")
+              d3.select("#tooltip")
+                .transition()
+                .style("visibility","hidden");
+           });
+
+
+   </script>
+
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

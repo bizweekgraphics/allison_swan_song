@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>BW 50</title>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>  
+	<link rel="stylesheet" href="css/bw50newstyle.css" />
+</head>
+<body class="demos">
+
+
+	<div id="content"> 
+	
+	<div id="sort-container" style="left:100px;top:0px;">
+		
+  		<div id="options" class="clearfix sort">
+    
+		
+     <ul class="option-set clearfix sort-navigation" data-option-key="sortBy">
+      <li id="sort-rank"><a href="#sortBy=rank" data-option-value="rank" class="h3">Sort by</a></li>
+     <li id="sort-rank"><a href="#sortBy=rank" data-option-value="rank" class="selected">Rank</a></li>
+      <li id="sort-name"><a href="#sortBy=name" data-option-value="name">Name</a></li>
+      <li id="sort-market"><a href="#sortBy=weight"  data-option-value="weight">Market Cap</a></li>
+      <li id="sort-rev"><a href="#sortBy=eps" data-option-value="revenue">Revenue</a></li>
+      <li id="sort-eps"><a href="#sortBy=eps" data-option-value="eps">Earnings Per Share</a></li>
+      
+    </ul>
+
+    
+   
+
+  </div> <!-- #options -->
+
+</div>
+  
+  <div id="filters-container"> 
+  
+    <div id="options" class="clearfix filters">
+  
+     <span class="list-header">Filter by Sector</br></br></span>
+
+      <ul class="option-set clearfix filter-navigation" data-option-key="filter">
+        <li><a href="#filter" data-option-value="*" class="selected">Show all</a></li>
+        <li class="consum-dis"><a href="#filter" data-option-value=".consum-dis">Consumer Discretionary</a></li>
+        <li class="consum-sta"><a href="#filter" data-option-value=".consum-sta">Consumer Staples</a></li>
+        <li class="energy"><a href="#filter" data-option-value=".energy">Energy</a></li>
+        <li class="financials"><a href="#filter" data-option-value=".finance">Financials</a></li>
+         <li class="health"><a href="#filter" data-option-value=".health">Health Care</a></li>
+          <li class="industrials"><a href="#filter" data-option-value=".industrials">Industrials</a></li>
+         <li class="tech"><a href="#filter" data-option-value=".tech">Information Technology</a></li>
+         <li class="materials"><a href="#filter" data-option-value=".materials">Materials</a></li>
+         
+  
+        
+      </ul>
+    </div>
+
+</div>
+
+	
+	<div id="container" class="variable-sizes clearfix isotope" style="position: relative; overflow: hidden; width: auto; height: 480px; ">
+    
+   
+
+          
+    <div class="company health   width2 height2 isotope-item"   style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(5px, 5px, 0px); ">
+      <p class="rank-large">1</p>
+      <h3 class="name"><a href="http://www.businessweek.com/articles/2013-02-07/browsing-the-web-will-become-more-like-using-an-app#r=hp-ls">Actavis</a></h3>
+       <p class="ticker-large1"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a> </p>
+       <p class="item weight">$11b</p>
+      <p class="item revenue">$5.7b</p>
+      <p class="item eps">$1.29</p>
+    </div>
+    
+          
+    <div class="company tech     width2 height2   isotope-item"   style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(245px, 5px, 0px); ">
+      <p class="rank">2</p>
+      <h3 class="name"><a href="http://www.businessweek.com/articles/2013-02-07/browsing-the-web-will-become-more-like-using-an-app#r=hp-ls">Salesforce</br>.com Inc.</a></h3>
+       <p class="ticker-large2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$24b</p>
+       <p class="item revenue">$2.8b</p>
+      <p class="item eps">-$1.79</p>
+    </div>
+    
+          
+    <div class="company health     height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(365px, 5px, 0px); ">
+      <p class="rank">3</p>
+      <h3 class="name">DaVita HealthCare Partners</h3>
+      <p class="ticker-height"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$12b</p>
+      <p class="item revenue">$7.6b</p>
+      <p class="item eps">$5.51</p>
+    </div>
+    
+          
+    <div class="company consum-dis    width2  isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(605px, 5px, 0px); ">
+      <p class="rank">4</p>
+      <h3 class="name">Amazon.com</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$118b</p>
+      <p class="item revenue">$61.1b</p>
+      <p class="item eps">-$0.09</p>
+    </div>
+    
+          
+    <div class="company health     width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 5px, 0px); ">
+      <p class="rank">5</p>
+      <h3 class="name">Alexion Pharmaceuticals</h3>
+        <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$18b</p>
+      <p class="item revenue">$1.0b</p>
+      <p class="item eps">$1.12</p>
+    </div>
+    
+     <div class="company finance     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 5px, 0px); ">
+      <p class="rank">6</p>
+      <h3 class="name">American </br> Tower</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$30b</p>
+      <p class="item revenue">$2.8b</p>
+      <p class="item eps">$1.78</p>
+    </div>
+    
+          
+    <div class="company materials    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(1085px, 5px, 0px); ">
+      <p class="rank">7</p>
+      <h3 class="name">Eastman Chemical</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$11b<p>
+      <p class="item revenue">$8.1b</p>
+      <p class="item eps">$2.93</p>
+      
+    </div>
+    
+          
+    <div class="company industrials   height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(5px, 125px, 0px); ">
+      <p class="rank">8</p>
+      <h3 class="name">Flowserve</h3>
+      <p class="ticker-height2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$8b</p>
+      <p class="item revenue">$4.7b</p>
+      <p class="item eps">$7.99</p>
+    </div>
+    
+          
+    <div class="company tech    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(245px, 125px, 0px); ">
+      <p class="rank">9</p>
+      <h3 class="name">Apple</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$440b</p>
+      <p class="item revenue">$164.7b</p>
+      <p class="item eps">$44.10</p>
+    </div>
+    
+          
+    <div class="company tech      width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(605px, 125px, 0px); ">
+      <p class="rank">10</p>
+      <h3 class="name">Mastercard</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$65b</p>
+      <p class="item revenue">$2.8b</p>
+      <p class="item eps">$21.94</p>
+    </div>
+    
+     <div class="company consum-dis      height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(605px, 125px, 0px); ">
+      <p class="rank">11</p>
+      <h3 class="name">Time </br>Warner</br> Cable</h3>
+      <p class="ticker-height"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$26b</p>
+      <p class="item revenue">$21.4b</p>
+      <p class="item eps">$6.90</p>
+    </div>
+    
+          
+    <div class="company consum-dis  height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(5px, 245px, 0px); ">
+      <p class="rank">12</p>
+      <h3 class="name">Wyndham Worldwide</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$8b</p>
+      <p class="item revenue">$4.5b</p>
+      <p class="item eps">$2.75</p>
+    </div>
+    
+          
+    <div class="company health    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(1085px, 125px, 0px); ">
+      <p class="rank">13</p>
+      <h3 class="name">Gilead Sciences</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$61b</p>
+      <p class="item revenue">$9.7b</p>
+      <p class="item eps">$1.64</p>
+    </div>
+    
+          
+    <div class="company consum-dis      width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(365px, 245px, 0px); ">
+      <p class="rank">14</p>
+      <h3 class="name">Priceline.com</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$ 34b</p>
+      <p class="item revenue">$5.1b</p>
+      <p class="item eps">$26.49</p>
+    </div>
+    
+          
+    <div class="company consum-dis     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(485px, 245px, 0px); ">
+      <p class="rank">15</p>
+      <h3 class="name">Comcast</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$102b</p>
+      <p class="item revenue">$61.7b</p>
+      <p class="item eps">$2.20</p>
+    </div>
+    
+          
+    <div class="company energy    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 245px, 0px); ">
+      <p class="rank">16</p>
+      <h3 class="name">Airgas</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$8b</p>
+      <p class="item revenue">$4.9b</p>
+      <p class="item eps">$4.35</p>
+    </div>
+    
+          
+    <div class="company tech     height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(845px, 245px, 0px); ">
+      <p class="rank">17</p>
+      <h3 class="name"><a href="http://www.bloomberg.com/video/more-large-retailers-listing-on-ebay-ceo-says-99DMlD2fQ4aP4eNP~f~fzA.html">EBay</a></h3>
+       <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$73b</p>
+      <p class="item revenue">$14.1b</p>
+      <p class="item eps">$1.99</p>
+    </div>
+    
+          
+    <div class="company consum-dis     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(1085px, 245px, 0px); ">
+      <p class="rank">18</p>
+      <h3 class="name">Mattel</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$14b</p>
+      <p class="item revenue">$6.4b</p>
+      <p class="item eps">$2.22</p>
+    </div>
+    
+          
+    <div class="company materials   height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(245px, 365px, 0px); ">
+      <p class="rank">19</p>
+      <h3 class="name">Ecolab</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$22b</p>
+      <p class="item revenue">$10.6b</p>
+      <p class="item eps">$1.93</p>
+    </div>
+    
+          
+    <div class="company consum-dis   isotope-item" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">20</p>
+      <h3 class="name">Expedia</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$9b</p>
+      <p class="item revenue">$4.0b</p>
+      <p class="item eps">$2.00</p>
+    </div>
+    
+     <div class="company consum-sta    width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">21</p>
+      <h3 class="name">Constellation Brands</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$6b</p>
+      <p class="item revenue">$2.7b</p>
+      <p class="item eps">$2.14</p>
+    </div>
+    
+     <div class="company consum-dis   isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">22</p>
+      <h3 class="name">TJX</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$33b</p>
+      <p class="item revenue">$24.9b</p>
+      <p class="item eps">$2.35</p>
+    </div>
+    
+    <div class="company consum-dis    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">23</p>
+      <h3 class="name">Home </br> Depot</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$99b</p>
+      <p class="item revenue">$72.5b</p>
+      <p class="item eps">$2.82</p>
+    </div>
+    
+    <div class="company industrials   width2 height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">24</p>
+      <h3 class="name"><a href="http://www.businessweek.com/articles/2013-02-07/browsing-the-web-will-become-more-like-using-an-app#r=hp-ls">Equifax</a></h3>
+        <p class="ticker-large1"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a> </p>
+       <p class="item weight">$7b</p>
+      <p class="item revenue">$2.2b</p>
+      <p class="item eps">$2.22</p>
+    </div>
+    
+    <div class="company consum-dis  width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">25</p>
+      <h3 class="name">Starbucks</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$42b</p>
+      <p class="item revenue">$13.7b</p>
+      <p class="item eps">$1.86</p>
+    </div>
+    
+    <div class="company consum-dis   isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">26</p>
+      <h3 class="name">News </br>Corp</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$66b</p>
+      <p class="item revenue">$34.3b</p>
+      <p class="item eps">$1.69</p>
+    </div>
+    
+    <div class="company consum-dis  width2 height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">27</p>
+      <h3 class="name"><a href="http://www.businessweek.com/articles/2013-02-07/browsing-the-web-will-become-more-like-using-an-app#r=hp-ls">Time Warner</a></h3>
+        <p class="ticker-large2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a> </p>
+       <p class="item weight">$50b</p>
+      <p class="item revenue">$28.7b</p>
+      <p class="item eps">$3.09</p>
+    </div>
+    
+     <div class="company industrials   isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">28</p>
+      <h3 class="name">Union </br>Pacific</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$62b</p>
+      <p class="item revenue">$20.9b</p>
+      <p class="item eps">$8.27</p>
+    </div>
+    
+     <div class="company consum-dis     width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">29</p>
+      <h3 class="name">Discovery </br>Communications</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$25b</p>
+      <p class="item revenue">$4.4b</p>
+      <p class="item eps">$2.74</p>
+    </div>
+    
+    <div class="company consum-dis    height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">30</p>
+      <h3 class="name"><a href="http://www.bloomberg.com/video/iger-on-disney-s-results-bloomberg-west-2-5-wxZyN8ITQWm4KKnDDjr4xA.html">Walt Disney</a></h3>
+       <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$96b</p>
+      <p class="item revenue">$42.8b</p>
+      <p class="item eps">$3.09</p>
+    </div>
+    
+    <div class="company industrials    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">31</p>
+      <h3 class="name">Pentair</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$11b</p>
+      <p class="item revenue">$4.4b</p>
+      <p class="item eps">-$0.84</p>
+    </div>
+    
+    <div class="company materials    width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">32</p>
+      <h3 class="name">International Paper</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$19b</p>
+      <p class="item revenue">$27.8b</p>
+      <p class="item eps">$1.80</p>
+    </div>
+    
+      <div class="company materials    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">33</p>
+      <h3 class="name">CVS Caremark</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$64b</p>
+      <p class="item revenue">$123.1b</p>
+      <p class="item eps">$3.03</p>
+    </div>
+    
+     <div class="company consum-dis    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">34</p>
+      <h3 class="name">CBS</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$27b</p>
+      <p class="item revenue">$14.6b</p>
+      <p class="item eps">$2.34</p>
+    </div>
+    
+    <div class="company consum-dis    width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">35</p>
+      <h3 class="name">PulteGroup</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$27b</p>
+      <p class="item revenue">$14.6b</p>
+      <p class="item eps">$2.34</p>
+    </div>
+    
+    <div class="company consum-dis    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">36</p>
+      <h3 class="name">VF Corp</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$27b</p>
+      <p class="item revenue">$14.6b</p>
+      <p class="item eps">$2.34</p>
+    </div>
+    
+    <div class="company consum-dis    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">37</p>
+      <h3 class="name">Whirlpool</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$8b</p>
+      <p class="item revenue">$18.1b</p>
+      <p class="item eps">$5.06</p>
+    </div>
+    
+    <div class="company consum-sta    width2 height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">38</p>
+      <h3 class="name"><a href="http://www.businessweek.com/articles/2013-02-07/browsing-the-web-will-become-more-like-using-an-app#r=hp-ls">Whole </br>Foods Market</a></h3>
+        <p class="ticker-large3"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a> </p>
+       <p class="item weight">$27b</p>
+      <p class="item revenue">$14.6b</p>
+      <p class="item eps">$2.34</p>
+    </div>
+    
+     <div class="company consum-dis      isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">39</p>
+      <h3 class="name">Lowe's</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$44b</p>
+      <p class="item revenue">$51.1b</p>
+      <p class="item eps">$1.68</p>
+    </div>
+    
+     <div class="company energy   height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">40</p>
+      <h3 class="name">Pioneer </br>Natural </br>Resources</h3>
+      <p class="ticker-height"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$15b</p>
+      <p class="item revenue">$3.1b</p>
+      <p class="item eps">$0.33</p>
+    </div>
+    
+     <div class="company health     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">41</p>
+      <h3 class="name">Covidien</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$30b</p>
+      <p class="item revenue">$12.0b</p>
+      <p class="item eps">$3.93</p>
+    </div>
+    
+      <div class="company health      width2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">42</p>
+      <h3 class="name">McKesson</h3>
+       <p class="item weight">$24b</p>
+      <p class="item revenue">$123.5b</p>
+      <p class="item eps">$6.58</p>
+    </div>
+    
+    <div class="company health     height2 isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">43</p>
+      <h3 class="name">Ameri-</br>source</br>Bergen</h3>
+      <p class="ticker-height"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$11b</p>
+      <p class="item revenue">$80.8b</p>
+      <p class="item eps">$2.89</p>
+    </div>
+    
+     <div class="company consum-dis     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">44</p>
+      <h3 class="name">DirecTV</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$32b</p>
+      <p class="item revenue">$29.1b</p>
+      <p class="item eps">$4.08</p>
+    </div>
+    
+    <div class="company industrials    isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">45</p>
+      <h3 class="name">Snap-on</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$4b</p>
+      <p class="item revenue">$2.9b</p>
+      <p class="item eps">$5.20</p>
+    </div>
+    
+    <div class="company tech     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">46</p>
+      <h3 class="name"><a href="http://www.bloomberg.com/video/red-hat-is-investing-heavily-in-cloud-ceo-says-XPu~XgV5QV6x1BaZf~p4bg.html">Red Hat</a></h3>
+       <p class="item weight">$11b</p>
+      <p class="item revenue">$1.3b</p>
+      <p class="item eps">$0.73</p>
+    </div>
+    
+    <div class="company industrials      isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">47</p>
+      <h3 class="name">Mead-</br>Westvaco</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$5b</p>
+      <p class="item revenue">$5.5b</p>
+      <p class="item eps">$1.16</p>
+    </div>
+    
+    <div class="company health     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">48</p>
+      <h3 class="name">Biogen </br>Idec</h3>
+      <p class="ticker-width2"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$38b</p>
+      <p class="item revenue">$5.5b</p>
+      <p class="item eps">$5.76</p>
+    </div>
+    
+    <div class="company consum-dis     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">49</p>
+      <h3 class="name">PetSmart</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$7b</p>
+      <p class="item revenue">$6.5b</p>
+      <p class="item eps">$3.22</p>
+    </div>
+    
+    <div class="company health     isotope-item"  style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">50</p>
+      <h3 class="name">Cerner</h3>
+      <p class="ticker-width"><a href="http://investing.businessweek.com/research/stocks/snapshot/snapshot.asp?ticker=ACT">ACT</a></p>
+       <p class="item weight">$15b</p>
+      <p class="item revenue">$2.7b</p>
+      <p class="item eps">$2.26</p>
+    </div>
+    
+  </div>
+		 
+</div>
+
+  
+
+  <script>
+$(function(){
+      
+      var $container = $('#container');
+      
+      $container.isotope({
+        itemSelector : '.company',
+        masonry: { columnWidth: 10 },
+        getSortData : {
+          name : function( $elem ) {
+            return $elem.attr('data-name');
+          },
+          industry : function( $elem ) {
+            return $elem.attr('data-industry');
+          },
+          rank : function( $elem ) {
+            return parseInt( $elem.find('.rank').text(), 10 );
+          },
+          weight : function( $elem ) {
+            return parseFloat( $elem.find('.weight').text().replace( '$', '' ) );
+          },
+          revenue : function( $elem ) {
+            return parseFloat( $elem.find('.revenue').text().replace( '$', '' ) );
+          },
+          eps : function( $elem ) {
+            return parseFloat( $elem.find('.eps').text().replace( '$', '' ) );
+          },
+          name : function ( $elem ) {
+            return $elem.find('.name').text();
+          }
+        }
+  
+      });
+      
+      
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+
+      $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+          return false;
+        }
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // otherwise, apply new options
+          $container.isotope( options );
+        }
+        
+        return false;
+      });
+
+      
+    });
+    
+    
+	
+    
+
+
+
+
+    
+  </script>
+    
+  </section> <!-- #content -->
+ 
+</body>
+</html>

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Sorting &middot; Isotope Demo</title>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>  
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="demos">
+	<section id="content">
+	   <h1>Businessweek 50</h1>
+
+  <section id="options" class="clearfix">
+    
+    
+      <h3>Sort by </h3>
+
+     <ul id="sort-by" class="option-set clearfix" data-option-key="sortBy">
+     <li><a href="#sortBy=rank" data-option-value="rank">rank</a></li>
+      <li><a href="#sortBy=name" data-option-value="name">name</a></li>
+      <li><a href="#sortBy=weight"  data-option-value="weight">market value</a></li>
+      <li><a href="#sortBy=eps" data-option-value="revenue">revenue</a></li>
+      <li><a href="#sortBy=eps" data-option-value="eps">eps</a></li>
+      
+    </ul>
+    
+     <h3>Sort direction</h3>
+
+    <ul id="sort-direction" class="option-set clearfix" data-option-key="sortAscending">
+      <li><a href="#sortAscending=true" data-option-value="true" class="selected">descending</a></li>
+      <li><a href="#sortAscending=false" data-option-value="false">ascending</a></li>
+    </ul>
+    
+      <h3>Filter by Industry</h3>
+
+      <ul id="filters" class="option-set clearfix" data-option-key="filter">
+        <li><a href="#filter" data-option-value="*" class="selected">Show all</a></li>
+        <li><a href="#filter" data-option-value=".capital">Capital Goods</a></li>
+        <li><a href="#filter" data-option-value=".comm">Commercial & Professional Services</a></li>
+        <li><a href="#filter" data-option-value=".consum">Consumer Durables & Apparel </a></li>
+        <li><a href="#filter" data-option-value=".consum-ser">Consumer Services</a></li>
+        <li><a href="#filter" data-option-value=".energy">Energy</a></li>
+        <li><a href="#filter" data-option-value=".food-sta">Food & Staples Retailing</a></li>
+        <li><a href="#filter" data-option-value=".food-bev">Food, Beverage & Tobacco</a></li>
+         <li><a href="#filter" data-option-value=".health">Health Care Equipment & Services</a></li>
+        <li><a href="#filter" data-option-value=".material">Materials</a></li>
+        <li><a href="#filter" data-option-value=".media">Media</a></li>
+        <li><a href="#filter" data-option-value=".pharma">Pharmaceuticals, Biotechnology</a></li>
+        <li><a href="#filter" data-option-value=".real-estate">Real Estate</a></li>
+        <li><a href="#filter" data-option-value=".retail">Retailing</a></li>
+        <li><a href="#filter" data-option-value=".software">Software & Services</a></li>
+        <li><a href="#filter" data-option-value=".tech">Technology Hardware & Equipment</a></li>
+        <li><a href="#filter" data-option-value=".transport">Transportation</a></li>
+        
+      </ul>
+
+
+
+  </section> <!-- #options -->
+	
+	<div id="container" class="variable-sizes clearfix isotope" style="position: relative; overflow: hidden; width: auto; height: 480px; ">
+    
+          
+    <div class="company energy    width2 isotope-item" data-name="H" data-industry="energy" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(5px, 5px, 0px); ">
+      <p class="rank">1</p>
+      <h3 class="name">Actavis</h3>
+      <p class="weight">$11b</p>
+      <p class="revenue">$5.7b</p>
+      <p class="eps">1.29</p>
+    </div>
+    
+          
+    <div class="company energy    width2 isotope-item" data-name="He" data-industry="health" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(245px, 5px, 0px); ">
+      <p class="rank">2</p>
+      <h3 class="name">Salesforce.com Inc.</h3>
+      <p class="weight">$24b</p>
+       <p class="revenue">$2.8b</p>
+      <p class="eps">-1.79</p>
+    </div>
+    
+          
+    <div class="company capital     width2 height2 isotope-item" data-name="Li" data-industry="capital" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(365px, 5px, 0px); ">
+      <p class="rank">3</p>
+      <h3 class="name">Li</h3>
+      <p class="weight">6.941</p>
+    </div>
+    
+          
+    <div class="company consum     isotope-item" data-name="Be" data-industry="consum" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(605px, 5px, 0px); ">
+      <p class="rank">4</p>
+      <h3 class="name">Be</h3>
+      <p class="weight">9.012182</p>
+    </div>
+    
+          
+    <div class="company media    width2 isotope-item" data-name="B" data-industry="media" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 5px, 0px); ">
+      <p class="rank">5</p>
+      <h3 class="name">B</h3>
+      <p class="weight">10.811</p>
+    </div>
+    
+          
+
+    
+          
+    <div class="company energy    isotope-item" data-name="N" data-industry="energy" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(1085px, 5px, 0px); ">
+      <p class="rank">7</p>
+      <h3 class="name">N</h3>
+      <p class="weight">14.0067</p>
+    </div>
+    
+          
+    <div class="company energy    width2 isotope-item" data-name="O" data-industry="energy" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(5px, 125px, 0px); ">
+      <p class="rank">8</p>
+      <h3 class="name">O</h3>
+      <p class="weight">15.9994</p>
+    </div>
+    
+          
+    <div class="company material   height2 isotope-item" data-name="F" data-industry="material" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(245px, 125px, 0px); ">
+      <p class="rank">9</p>
+      <h3 class="name">F</h3>
+      <p class="weight">18.9984032</p>
+    </div>
+    
+          
+    <div class="company health     width2 isotope-item" data-name="Ne" data-industry="health" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(605px, 125px, 0px); ">
+      <p class="rank">10</p>
+      <h3 class="name">Ne</h3>
+      <p class="weight">20.1797</p>
+    </div>
+    
+          
+    <div class="company capital     isotope-item" data-name="Na" data-industry="capital" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(845px, 125px, 0px); ">
+      <p class="rank">11</p>
+      <h3 class="name">Na</h3>
+      <p class="weight">22.98976928</p>
+    </div>
+    
+          
+    <div class="company consum   width2 height2 isotope-item" data-name="Mg" data-industry="consum" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(5px, 245px, 0px); ">
+      <p class="rank">12</p>
+      <h3 class="name">Mg</h3>
+      <p class="weight">$24b</p>
+    </div>
+    
+          
+    <div class="company pharma    isotope-item" data-name="Al" data-industry="pharma" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(1085px, 125px, 0px); ">
+      <p class="rank">13</p>
+      <h3 class="name">Al</h3>
+      <p class="weight">26.9815386</p>
+    </div>
+    
+          
+    <div class="company media    isotope-item" data-name="Si" data-industry="media" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(365px, 245px, 0px); ">
+      <p class="rank">14</p>
+      <h3 class="name">Si</h3>
+      <p class="weight">28.0855</p>
+    </div>
+    
+          
+    <div class="company energy    width2 height2 isotope-item" data-name="P" data-industry="energy" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(485px, 245px, 0px); ">
+      <p class="rank">15</p>
+      <h3 class="name">P</h3>
+      <p class="weight">30.973762</p>
+    </div>
+    
+          
+    <div class="company energy    isotope-item" data-name="S" data-industry="other" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 245px, 0px); ">
+      <p class="rank">16</p>
+      <h3 class="name">S</h3>
+      <p class="weight">32.065</p>
+    </div>
+    
+          
+    <div class="company material     width2 isotope-item" data-name="Cl" data-industry="material" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(845px, 245px, 0px); ">
+      <p class="rank">17</p>
+      <h3 class="name">Cl</h3>
+      <p class="weight">35.453</p>
+    </div>
+    
+          
+    <div class="company health     height2 isotope-item" data-name="Ar" data-industry="health" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(1085px, 245px, 0px); ">
+      <p class="rank">18</p>
+      <h3 class="name">Ar</h3>
+      <p class="weight">39.948</p>
+    </div>
+    
+          
+    <div class="company capital   width2 isotope-item" data-name="K" data-industry="capital" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(245px, 365px, 0px); ">
+      <p class="rank">19</p>
+      <h3 class="name">K</h3>
+      <p class="weight">39.0983</p>
+    </div>
+    
+          
+    <div class="company consum   isotope-item" data-name="Ca" data-industry="consum" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">20</p>
+      <h3 class="name">Ca</h3>
+      <p class="weight">40.078</p>
+    </div>
+    
+     <div class="company real-estate   height2 isotope-item" data-name="Atc" data-industry="real-estate" style="position: absolute; left: 0px; top: 0px; -webkit-transform: translate3d(725px, 365px, 0px); ">
+      <p class="rank">6</p>
+      <h3 class="name">Atc</h3>
+      <p class="weight">30,003</p>
+    </div>
+    
+  </div>
+		 
+  
+
+  <script>
+$(function(){
+      
+      var $container = $('#container');
+      
+      $container.isotope({
+        itemSelector : '.company',
+        getSortData : {
+          name : function( $elem ) {
+            return $elem.attr('data-name');
+          },
+          industry : function( $elem ) {
+            return $elem.attr('data-industry');
+          },
+          rank : function( $elem ) {
+            return parseInt( $elem.find('.rank').text(), 10 );
+          },
+          weight : function( $elem ) {
+            return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
+          },
+          name : function ( $elem ) {
+            return $elem.find('.name').text();
+          }
+        }
+      });
+      
+      
+      var $optionSets = $('#options .option-set'),
+          $optionLinks = $optionSets.find('a');
+
+      $optionLinks.click(function(){
+        var $this = $(this);
+        // don't proceed if already selected
+        if ( $this.hasClass('selected') ) {
+          return false;
+        }
+        var $optionSet = $this.parents('.option-set');
+        $optionSet.find('.selected').removeClass('selected');
+        $this.addClass('selected');
+  
+        // make option object dynamically, i.e. { filter: '.my-filter-class' }
+        var options = {},
+            key = $optionSet.attr('data-option-key'),
+            value = $this.attr('data-option-value');
+        // parse 'false' as false boolean
+        value = value === 'false' ? false : value;
+        options[ key ] = value;
+        if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+          // changes in layout modes need extra logic
+          changeLayoutMode( $this, options )
+        } else {
+          // otherwise, apply new options
+          $container.isotope( options );
+        }
+        
+        return false;
+      });
+
+      
+    });
+  </script>
+    
+  </section> <!-- #content -->
+ 
+</body>
+</html>

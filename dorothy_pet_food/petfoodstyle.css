@@ -1,0 +1,77 @@
+/* my style */
+
+@font-face {
+font-family:'BWHaasHead';
+src:url("http://www.businessweek.com/assets/type/hinted/haas/bwhaasgroteskhead-95black.eot?#iefix") format("eot"),
+url("http://www.businessweek.com/assets/type/hinted/haas/bwhaasgroteskhead-95black.woff") format("woff"),
+url("http://www.businessweek.com/assets/type/haas/bwhaasgroteskhead-95black.ttf") format("truetype");
+font-style:normal;
+font-weight:700;
+font-stretch:normal
+}
+
+#bwg-petfood-shell{
+	width:950px;
+	font-family: 'BWHaasHead', Helvetica, arial, times;
+	position:relative;
+	margin:0px;
+	}
+	
+#bwg-petfoodlat-containter{
+	width:950px;
+	font-family: 'BWHaasHead', Helvetica, arial, times;
+	position:relative;
+	margin:0px;
+	}
+	
+#bwg-petfoodcost-containter{
+	width:950px;
+	font-family: 'BWHaasHead', Helvetica, arial, times;
+	position:relative;
+	margin:0px;
+	}
+	
+	/*tooltip style*/
+
+* {margin:0; padding:0}
+body {font:12px/1.5 'BWHaasHead', Helvetica, sans-serif; background:#FFF}
+#text {margin:50px auto; width:500px}
+.hotspot {color:#fff; padding-bottom:1px; cursor:pointer}
+
+
+#tt {pbackground: red;
+  background: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border: 1px solid #ddd;
+  padding: 2px 5px;
+  font-family: arial, sans-serif;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);}
+  
+.country_name:hover {
+	opacity:1;
+	stroke:#000;
+	stroke-width:1.3px;
+	}
+	
+.dog:hover {
+	opacity:1;
+	stroke:#000;
+	stroke-width:.5px;
+	}
+
+.cat:hover {
+	opacity:1;
+	stroke:#000;
+	stroke-width:.5px;
+	}
+
+
+
+
+
+/* My Style */

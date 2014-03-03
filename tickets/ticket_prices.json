@@ -1,0 +1,101 @@
+{
+ "name": "tickets",
+ "children": [
+  {
+   "name": "events",
+   "children": [
+  {
+     "name": "NFL",
+     "children": [
+      {"name": "SuperBowl2014", "size":  3676},
+      {"name": "SuperBowl2013", "size":  2478.94}
+     ]
+    },
+    {
+     "name": "boxing",
+     "children": [
+      {"name": "mayweatherVSalvarez", "size":  2168.48},
+      {"name": "mayweatherVSguerrero", "size":  755.21}
+     ]
+    },
+    {
+     "name": "collegebball",
+     "children": [
+      {"name": "finalfour", "size": 1021.35},
+      {"name": "uncVSduke", "size": 1007.79},
+      {"name" : "2013bigeast", "size" : 841.76},
+      {"name" : "2013big12tournament", "size" : 690.27},
+      {"name" : "2013big10tournament", "size" : 688.47}
+     ]
+    },
+    {
+     "name": "collegefootball",
+     "children": [
+      {"name": "2013BCS", "size": 1705.25},
+      {"name": "alabamaVSa&m", "size": 639.38}
+     ]
+    },
+      {
+     "name": "golf",
+     "children": [
+      {"name": "2013masters", "size": 3599.43},
+      {"name": "USopen", "size": 1009.44}
+     ]
+    },
+    {
+     "name": "hockey",
+     "children": [
+      {"name": "StanleyCupGame6", "size": 1033.34},
+      {"name": "StanleyCupGame5", "size": 975.08},
+      {"name" : "StanleyCupGame2", "size" : 825.40},
+      {"name" : "StanleyCupGame4", "size" : 804.70},
+      {"name" : "StanleyCupGame3", "size" : 759.54},
+      {"name" : "StanleyCupGame1", "size" : 734.71}
+     ]
+    },
+    {
+     "name": "MLB",
+     "children": [
+      {"name": "WorldSeriesGame6", "size": 1174.53},
+      {"name": "WorldSeriesGame2", "size": 806.90},
+      {"name" : "WorldSeriesGame3", "size" : 763.14},
+      {"name" : "WorldSeriesGame4", "size" : 719.86},
+      {"name" : "WorldSeriesGame1", "size" : 703.03},
+      {"name" : "2013MLBAllStar", "size" : 643.39},
+      {"name" : "WorldSeriesGame5", "size" : 613.99}
+     ]
+    },
+    {
+     "name": "music",
+     "children": [
+      {"name": "CMAs", "size": 1174.53},
+      {"name": "iHeartRadio", "size": 644.19},
+      {"name" : "RollingStones1", "size" : 644.16},
+      {"name" : "RollingStones2", "size" : 719.86},
+      {"name" : "Phish3day", "size" : 542.62}
+     ]
+    },
+    {
+     "name": "NBA",
+     "children": [
+      {"name": "nbaAllStar", "size": 1022.47},
+      {"name": "NBAfinalsGame7", "size": 1014.26},
+      {"name" : "NBAfinalsGame5", "size" : 611.36},
+      {"name" : "NBAfinalsGame2", "size" : 598.67},
+      {"name" : "NBAfinalsGame6", "size" : 594.89},
+      {"name" : "NBAfinalsGame1", "size" : 543.95}
+     ]
+    },
+        {
+     "name": "misc",
+     "children": [
+      {"name": "collegewrestling", "size": 552.19},
+      {"name": "GrandPrix", "size": 629.13},
+      {"name" : "BurningMan", "size" : 560.64},
+      {"name" : "UFC167", "size" : 586.05}
+     ]
+    }
+   ]
+  }
+ ]
+}

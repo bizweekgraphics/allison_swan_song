@@ -1,0 +1,514 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  padding: 0px;
+  font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+  font-size: 12px;
+}
+
+#bwg-shell {
+  width:960px;
+}
+
+#content {
+padding-left:10px;
+padding-top:0px;
+  width:655px;
+  font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+}
+
+
+#container {
+    border-right:1px solid #CCCCCC;
+    border-left:1px solid #CCCCCC;
+    position:absolute; 
+       
+    
+}
+
+h1, h2, h3, p, ul, ol, pre, dl {
+}
+
+
+h1, h2, h3 { 
+font-weight: 500; 
+display:block;
+font-size:12px;
+}
+
+h4 { 
+font-weight: 600; 
+display:block;
+font-size:12px;
+}
+
+
+h1 {
+  font-size: 32px;
+  line-height: 1.1em;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* link styles */
+
+
+
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  height: 100%;
+}
+
+
+/* company styles */
+
+.company {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #888;
+  color: #222;
+
+        
+}
+.company.manu      { background: #BC7062; } 
+.company.sports       { background: #e2ecf1; }
+.company.arts  { background: #b0bdcc; }
+.company.insurance         { background: #8d98a5; }
+.company.nonprofit         { background: #c7c3be; }
+.company.misc  { background:  #948d87; }
+
+
+.company * {
+  position: absolute;
+  margin: 0;
+}
+
+/* ticker styles */
+
+
+.company .name {
+  left: 0.5em;
+  top: 0.4em;
+  font-size: 12px;
+  line-height: 1.0em;
+  color: #000;
+}
+
+
+/* item sizes */
+
+.variable-sizes .company.height2 { 
+	height: 22px; }
+	
+.variable-sizes .company.width9 { 
+	width: 25px; } /* vvvvv small */
+
+.variable-sizes .company.width18 { 
+	width: 45px; } 
+	
+.variable-sizes .company.width28 { 
+	width: 55px; } 
+	
+	
+	.variable-sizes .company.width6 { 
+	width: 65px; } /*very small widths*/
+
+.variable-sizes .company.width1 { 
+	width: 82px; } /*default*/
+	
+
+.variable-sizes .company.width21{ 
+	width: 90px; }
+
+.variable-sizes .company.width17 { 
+	width: 95px; } 
+	
+.variable-sizes .company.width7 { 
+	width: 105px; } 
+
+.variable-sizes .company.width2 { 
+	width: 115px; }
+	
+	.variable-sizes .company.width11 { 
+	width: 145px; } 
+
+.variable-sizes .company.width12 { 
+	width: 130px; }
+	
+	.variable-sizes .company.width32 { 
+	width: 120px; }
+		
+.variable-sizes .company.width4 { 
+	width: 160px; }
+	
+	.variable-sizes .company.width22{ 
+	width: 140px; }
+
+.variable-sizes .company.width13 { 
+	width: 170px; }
+
+
+.variable-sizes .company.width3 { 
+	width: 165px; }
+	
+.variable-sizes .company.width20{ 
+	width: 155px; }
+	
+.variable-sizes .company.width16{ 
+	width: 190px; }
+	
+
+	
+.variable-sizes .company.width14 { 
+	width: 200px; } /*very large widths*/
+	
+	.variable-sizes .company.width10 { 
+	width: 210px; } 
+
+	
+.variable-sizes .company.width5 { 
+	width: 235px; } /*very large widths*/
+	
+ .variable-sizes .company.width19 { 
+	width: 245px; } /*very large widths*/
+
+
+/**** Nav Styles  ****/
+
+#side-text {
+	width:100px;
+	position:absolute;
+	float:left;	
+	padding:10px;
+	background-color:#000;
+}
+
+#bw-text {
+	width:95px;
+	color:#FFF;
+	}
+
+#filters1-container {
+	position:relative;
+	display:block;
+	border-bottom:1px solid #CCCCCC;
+	width:655px;
+}
+
+
+#filters2-container {
+	width:120px;
+	position:absolute;
+	padding:10px;
+}
+
+.list-header {
+	padding-bottom: 0.5em;
+	border-bottom:1px solid #CCCCCC;
+	color:#000;
+	}
+
+.desc-header {
+	padding-bottom: 0.5em;
+	border-bottom:1px solid #FFF;
+	color:#FFF;
+	font-weight:bold;
+	}
+
+.desc {
+	font-weight:bold;
+	padding-bottom: 0.5em;
+	border-bottom:1px solid #CCCCCC;
+	text-align:center;
+	}
+
+.data-headline {
+	font-size:14px;
+	}
+
+.data-summary {
+	font-size:14px;
+	}
+
+
+/* filter styles */
+
+
+#filter1-options ul {
+  margin: 0;
+  list-style: none;
+  padding-top:5px;
+}
+
+#filter2-options ul {
+  margin: 0;
+  list-style: none;
+}
+
+.filter a {
+color: #000; 
+cursor: pointer;
+padding: 5px 10px 10px 10px ;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-align: left;
+text-decoration:none;
+line-height:1.0em;
+  list-style-type: none;
+}
+
+.filter a.selected {
+  text-shadow: none;
+  font-weight:bold;
+  text-decoration:underline;
+  font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+}
+
+
+.filter li.all {
+height:22px;
+margin-top:5px;
+background-color: #FFF;width:120px;
+cursor: pointer;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-align: left;
+text-decoration:none;
+line-height:1.0em;
+list-style-type: none;
+}
+
+
+.filter li.manu {
+margin-top:3px;
+background-color: #BC7062; height:35px; width:120px;
+cursor: pointer;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-align: left;
+text-decoration:none;
+line-height:1.0em;
+list-style-type: none;
+}
+
+.filter li.sports {
+margin-top:1px;
+height:22px;
+background-color: #e2ecf1; height:35px; width:120px;
+cursor: pointer;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-align: left;
+text-decoration:none;
+line-height:1.0em;
+list-style-type: none;
+}
+
+
+.filter li.arts {
+margin-top:1px;
+height:22px;
+background-color: #b0bdcc; width:120px;
+cursor: pointer;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-align: left;
+text-decoration:none;
+line-height:1.0em;
+list-style-type: none;
+}
+
+
+.filter li.insurance {
+margin-top:1px;
+height:22px;
+background-color: #8d98a5;width:120px;
+cursor: pointer;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-align: left;
+text-decoration:none;
+line-height:1.0em;
+list-style-type: none;
+}
+
+.filter li.nonprofit {
+margin-top:1px;
+height:22px;
+  font-size: 12px;
+background-color: #c7c3be; width:120px; 
+cursor: pointer;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-decoration:none;
+line-height:1.0em;
+list-style-type: none;
+}
+
+.filter li.misc{
+margin-top:1px;
+height:22px;
+background-color: #948d87; width:120px;
+cursor: pointer;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-align: left;
+text-decoration:none;
+line-height:1.0em;
+list-style-type: none;
+}
+
+
+  
+.filter a:hover {
+  font-weight:bold;
+}
+
+
+.sort-navigation li:first-child a {
+  border-right: 1px solid		#b2f0f3;
+  font-weight:bold;
+}
+
+
+
+/* Commercial license blurb */
+
+.docs #commercial {
+  background: white;
+  padding: 10px;
+  font-size: 14px;
+  color: #1F1F1D;
+}
+
+.docs #commercial a { font-weight: bold;}
+
+
+
+/**** Infinite Scroll ****/
+
+#infscr-loading {
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+  left: 42%;
+  z-index: 100;
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.9 );
+  padding: 20px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}

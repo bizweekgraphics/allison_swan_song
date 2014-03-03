@@ -1,0 +1,443 @@
+@font-face{font-family:'BWHaasHead';src:url("http://www.businessweek.com/assets/
+type/hinted/haas/bwhaasgroteskhead-95black.eot?#iefix") format("eot"),url
+("http://www.businessweek.com/assets/type/hinted/haas/
+bwhaasgroteskhead-95black.woff") format("woff"),url("http://
+www.businessweek.com/assets/type/haas/bwhaasgroteskhead-95black.ttf") format
+("truetype");font-style:normal;font-weight:700;font-stretch:normal}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  padding: 0px;
+  font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+  font-size: 12px;
+}
+
+#bwg-shell {
+  width:960px;
+}
+
+#content {
+padding-left:10px;
+padding-top:0px;
+  width:660px;
+}
+
+
+#container {
+    border-right:1px solid #CCCCCC;
+    border-left:1px solid #CCCCCC;
+    position:absolute;    
+    
+}
+
+#container .hilite-active {
+	color: #000;
+	background-color:#FFF;
+	padding: 2px 3px 0px 3px;
+}
+
+
+h1, h2, h3, p, ul, ol, pre, dl {
+  margin-bottom: 0.5em;
+}
+
+
+h1, h2, h3 { 
+font-weight: bold; 
+display:block;
+font-size:13px;
+}
+
+
+h1 {
+  font-size: 32px;
+  line-height: 1.1em;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+/* link styles */
+
+
+.name a,
+a code { 
+  color: #000; 
+  line-height:1.0em;
+  text-decoration:none;
+}
+
+
+.name a:hover,
+a:hover code { 
+  color: #FFF; 
+  line-height:1.0em;
+}
+
+
+
+/**** Isotope styles ****/
+
+/* required for containers to inherit vertical size from window */
+html,
+body {
+  height: 100%;
+}
+
+
+/* company styles */
+
+.company {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: #888;
+  color: #222;
+
+        
+}
+.company.manu      { background: #B2B2B2; }
+.company.sports       { background: #009999; }
+.company.arts  { background: #FFFF00;}
+.company.misc  { background: #CC0066;  }
+.company.insurance         { background: #FF9900; }
+.company.nonprofit         { background: #19D1A3; }
+.company.blank         { background: #FFF; }
+
+
+.company * {
+  position: absolute;
+  margin: 0;
+}
+
+/* ticker styles */
+
+
+.company .name {
+  left: 0.5em;
+  top: 0.4em;
+  font-size: 12px;
+  line-height: 1.0em;
+  color: #000;
+  opacity:100%;
+}
+
+
+/* item sizes */
+
+.variable-sizes .company.height2 { 
+	height: 20px; }
+	
+.variable-sizes .company.width9 { 
+	width: 30px; } /* vvvvv small */
+
+.variable-sizes .company.width18 { 
+	width: 60px; } 
+	
+	.variable-sizes .company.width6 { 
+	width: 80px; } /*very small widths*/
+
+.variable-sizes .company.width1 { 
+	width: 98px; } /*default*/
+	
+.variable-sizes .company.width17 { 
+	width: 115px; } 
+	
+	.variable-sizes .company.width21{ 
+	width: 105px; }
+
+	
+.variable-sizes .company.width7 { 
+	width: 130px; } 
+
+.variable-sizes .company.width2 { 
+	width: 140px; }
+	
+	.variable-sizes .company.width11 { 
+	width: 150px; } 
+
+.variable-sizes .company.width12 { 
+	width: 158px; }
+		
+.variable-sizes .company.width4 { 
+	width: 175px; }
+
+.variable-sizes .company.width13 { 
+	width: 195px; }
+
+
+.variable-sizes .company.width3 { 
+	width: 200px; }
+	
+.variable-sizes .company.width20{ 
+	width: 215px; }
+	
+.variable-sizes .company.width16{ 
+	width: 235px; }
+	
+	
+.variable-sizes .company.width10 { 
+	width: 252px; } 
+	
+	
+.variable-sizes .company.width14 { 
+	width: 270px; } /*very large widths*/
+	
+	
+.variable-sizes .company.width5 { 
+	width: 300px; } /*very large widths*/
+	
+ .variable-sizes .company.width19 { 
+	width: 330px; } /*very large widths*/
+
+
+/**** Nav Styles  ****/
+
+#side-text {
+	width:100px;
+	position:absolute;
+	float:left;	
+	padding:10px;
+	background-color:#000;
+}
+
+#bw-text {
+	width:100px;
+	color:#FFF;
+	}
+	
+.bw-rollover{
+	color:#FFF;
+	}
+
+
+#filters2-container {
+	width:120px;
+	position:absolute;
+	padding:10px;
+}
+
+#filters1-container {
+	position:relative;
+	display:block;
+	border-bottom:1px solid #CCCCCC;
+	width:660px;
+}
+
+.list-header {
+	padding-bottom: 0.5em;
+	border-bottom:1px solid #CCCCCC;
+	color:#000;
+	}
+
+.desc-header {
+	padding-bottom: 0.5em;
+	border-bottom:1px solid #CCCCCC;
+	color:#FFF;
+	}
+
+.desc {
+	font-weight:bold;
+	padding-bottom: 0.5em;
+	border-bottom:1px solid #CCCCCC;
+	text-align:center;
+	}
+
+.data-headline {
+	font-size:14px;
+	}
+
+.data-summary {
+	font-size:14px;
+	}
+
+
+#filter1-options ul {
+  margin: 0;
+  list-style: none;
+}
+
+#filter2-options ul {
+  margin: 0;
+  list-style: none;
+}
+
+.filter a {
+color: #000;
+cursor: pointer;
+padding: 10px 10px 10px 10px ;
+font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+float: left;
+display: inline-block;
+text-align: left;
+text-decoration:none;
+line-height:1.0em;
+  list-style-type: none;
+}
+
+
+.filter li a.selected {
+  background-color: #000;
+	padding: 10px 10px 10px 10px ;
+  text-shadow: none;
+  color: #FFF;
+  font-family: 'BWHaasHead', 'Helvetica','Arial', sans-serif;
+
+}
+
+.filter .manu .selected {
+  background-color: red;
+
+}
+
+
+  
+.filter a:hover {
+  text-decoration:underline;
+}
+
+.filter li a:active {
+  background-color: #000;
+  -webkit-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+     -moz-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+       -o-box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+          box-shadow: inset 0 2px 8px hsla( 0, 0%, 0%, 0.6 );
+}
+
+
+
+.sort-navigation li:first-child a {
+  border-right: 1px solid		#B2B2B2;
+  font-weight:bold;
+}
+
+
+
+/* Commercial license blurb */
+
+.docs #commercial {
+  background: white;
+  padding: 10px;
+  font-size: 14px;
+  color: #1F1F1D;
+}
+
+.docs #commercial a { font-weight: bold;}
+
+
+
+/**** Infinite Scroll ****/
+
+#infscr-loading {
+  position: fixed;
+  text-align: center;
+  bottom: 30px;
+  left: 42%;
+  z-index: 100;
+  background: white;
+  background: hsla( 0, 0%, 100%, 0.9 );
+  padding: 20px;
+  color: #222;
+  font-size: 15px;
+  font-weight: bold;
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+
+
+
+/* The Magnificent Clearfix: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+/* End: Recommended Isotope styles */
+
+
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling {
+  -webkit-transition: none;
+     -moz-transition: none;
+      -ms-transition: none;
+       -o-transition: none;
+          transition: none;
+}
